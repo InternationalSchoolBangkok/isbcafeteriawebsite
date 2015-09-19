@@ -43,24 +43,3 @@ q:before,q:after {
 abbr,acronym { border: 0;
 }
 
-
-/* CSS*/
-body{
-	font-family: arial,helvetica;
-	color: #333;
-}
-
-h1{
-	font-size: 6em;
-}
-p{
-	font-size: 2em;
-}
-.intro p{
-	width: 50%;
-	margin: 0 auto;
-	font-size: 1.5em;
-}
-.section{
-	text-align:center;
-}
