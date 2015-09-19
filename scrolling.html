@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<head>
+	<title>EHEHHEHEH FOOD</title>
+    <!--Load dem Css files-->
+	<link rel="stylesheet" type="text/css" href="jquery.fullPage.css" />
+	<link rel="stylesheet" type="text/css" href="examples.css" />
+    <!--Temp Css Loader-->
+	<style>
+
+	/* Main Text Styles
+    ----------------------------------------*/
+	h1{
+		font-size: 5em;
+		font-family: arial,helvetica;
+		color: #fff;
+		margin:0;
+		padding:40px 0 0 0;
+	}
+	.intro p{
+		color: #fff;
+		padding:40px 0 0 0;
+	}
+
+	/* Section Styling
+	* --------------------------------------- */
+	.section{
+		text-align:center;
+	}
+
+    /* Page 1 Navigation
+	* --------------------------------------- */    
+    nav ul li{
+    display:inline-block;
+    font-size:2em;
+    padding-left:2vw;
+    padding-right:2vw;
+    padding-top: 5vh;
+    }  
+       
+    a{
+        color:black;
+    }
+	/* Individual Dates
+	* --------------------------------------- */
+	#slide1{
+        background-color:chocolate;
+    }
+    #slide2{
+        background-color: aqua;
+    }
+    #slide3{
+        background-color: aquamarine;
+    }
+    #slide4{
+        background-color: darkmagenta;
+    }    
+    #slide5{
+        background-color: darksalmon;
+    } 
+	</style>
+
+<!--Javascript/JQuery-->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+    <!--Load the plugin-->
+	<script type="text/javascript" src="jquery.slimscroll.min.js"></script>
+	<script type="text/javascript" src="jquery.fullPage.js"></script>
+    <!--Custom JS for later-->
+    <script src="js.js"></script>
+    <!--Settings for scroll plugin-->
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#fullpage').fullpage({
+				anchors: ['firstPage', 'secondPage', '3rdPage'],
+				sectionsColor: ['#4A6FB1', '#939FAA', 'red'],
+                scrollingSpeed: 300,
+				scrollOverflow: true
+			});
+		});
+	</script>
+
+</head>
+<body>
+
+<div id="fullpage">
+    <div class="section" id="section0">
+        <div class="intro">
+            <h1>ISB Cafeteria Menu</h1>
+            <nav>
+            <ul>
+                <li><a href="#secondPage/slide1">Monday</a></li>
+                <li><a href="#secondPage/slide2">Tuesday</a></li>
+                <li><a href="#secondPage/slide3">Wednesday</a></li>
+                <li><a href="#secondPage/slide4">Thursday</a></li>
+                <li><a href="#secondPage/slide5">Friday</a></li>
+                
+            </ul>
+            
+            
+            </nav>
+            
+			
+		</div>
+    </div>
+	
+	<div class="section" id="section1">
+	    <div class="slide" id="slide1" data-anchor="slide1"><!--Monday--> 
+			<h1>Monday</h1>
+            <h3>Donburi</h3>
+            <h3>Thai</h3>
+            <h3>Continental</h3>
+            <h3>Noodles</h3>
+            <h3>Special</h3>
+		</div>
+
+	    <div class="slide" id="slide2" data-anchor="slide2"><h1>Tuesday</h1><!--Tuesday-->
+        </div>
+		<div class="slide" id="slide3" data-anchor="slide3"><h1>Wednesday</h1><!--Wednesday-->
+		</div>
+        <div class="slide" id="slide4" data-anchor="slide4"><h1>Thursday</h1><!--Thursday-->
+		</div>
+        <div class="slide" id="slide5" data-anchor="slide5"><h1>Friday</h1><!--Friday-->
+		</div>
+	</div>
+	<div class="section" id="section2">
+		<div class="intro">
+			<h2 style="font-size:3em">Made by the Software Development Club</h2>
+            <h3>and the Student Council</h3>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>
