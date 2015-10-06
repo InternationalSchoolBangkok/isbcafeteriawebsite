@@ -82,8 +82,14 @@
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
     <!--Load the plugin-->
+    <!--Fullpage.js-->
 	<script type="text/javascript" src="jquery.slimscroll.min.js"></script>
 	<script type="text/javascript" src="jquery.fullPage.js"></script>
+    
+    <!--Modal Stuff-->
+    <script src="jquery.modal.min.js" type="text/javascript" charset="utf-8"></script>
+    <link rel="stylesheet" href="jquery.modal.css" type="text/css" media="screen" />
+    
     <!--Custom JS for later-->
     <script src="js.js"></script>
     <!--Settings for scroll plugin-->
@@ -119,7 +125,11 @@
 			
 		</div>
     </div>
-	
+	<div id="infomodal" style="display:none;">
+        <p>
+            <div id="foodInfo"></div>
+        </p>
+    </div>
 	<div class="section" id="section1">
 	    <div class="slide" id="slide1" data-anchor="slide1"><!--Monday--> 
 			<h1>Monday</h1>
@@ -135,36 +145,36 @@
                     <td>Live Station</td>
                 </tr>
                 <tr>
-                    <td><img src="images/monday/jitterbeast.gif"></td><!--Asian-->
-                    <td><img src="images/monday/jitterbeast.gif"></td><!--Continental-->
-                    <td><img src="images/monday/jitterbeast.gif"></td><!--Noodle-->
-                    <td><img src="images/monday/jitterbeast.gif"></td><!--Japanese-->
-                    <td><img src="images/monday/jitterbeast.gif"></td><!--Veggies-->
-                    <td><img src="images/monday/jitterbeast.gif"></td><!--LIVE-->
+                    <td class="tdhover"><img class="imghover" src="images/monday/jitterbeast.gif"></td><!--Asian-->
+                    <td class="tdhover"><img class="imghover" src="images/monday/jitterbeast.gif"></td><!--Continental-->
+                    <td class="tdhover"><img class="imghover" src="images/monday/jitterbeast.gif"></td><!--Noodle-->
+                    <td class="tdhover"><img class="imghover" src="images/monday/jitterbeast.gif"></td><!--Japanese-->
+                    <td class="tdhover"><img class="imghover" src="images/monday/jitterbeast.gif"></td><!--Veggies-->
+                    <td class="tdhover"><img class="imghover" src="images/monday/jitterbeast.gif"></td><!--LIVE-->
                 </tr>
                 <tr>
-                    <td><img src="images/monday/jitterbeast.gif"></td><!--Asian-->
-                    <td><img src="images/monday/jitterbeast.gif"></td><!--Continental-->
-                    <td><img src="images/monday/jitterbeast.gif"></td><!--Noodle-->
-                    <td><img src="images/monday/jitterbeast.gif"></td><!--Japanese-->
-                    <td><img src="images/monday/jitterbeast.gif"></td><!--Veggies-->
-                    <td><img src="images/monday/jitterbeast.gif"></td><!--LIVE-->
+                    <td class="tdhover"><img class="imghover" src="images/monday/jitterbeast.gif"></td><!--Asian-->
+                    <td class="tdhover"><img class="imghover" src="images/monday/jitterbeast.gif"></td><!--Continental-->
+                    <td class="tdhover"><img class="imghover" src="images/monday/jitterbeast.gif"></td><!--Noodle-->
+                    <td class="tdhover"><img class="imghover" src="images/monday/jitterbeast.gif"></td><!--Japanese-->
+                    <td class="tdhover"><img class="imghover" src="images/monday/jitterbeast.gif"></td><!--Veggies-->
+                    <td class="tdhover"><img class="imghover" src="images/monday/jitterbeast.gif"></td><!--LIVE-->
                 </tr>
                 <tr>
-                    <td><img src="images/monday/jitterbeast.gif"></td><!--Asian-->
-                    <td><img src="images/monday/jitterbeast.gif"></td><!--Continental-->
-                    <td><img src="images/monday/jitterbeast.gif"></td><!--Noodle-->
-                    <td><img src="images/monday/jitterbeast.gif"></td><!--Japanese-->
-                    <td><img src="images/monday/jitterbeast.gif"></td><!--Veggies-->
-                    <td><img src="images/monday/jitterbeast.gif"></td><!--LIVE-->
+                    <td class="tdhover"><img class="imghover" src="images/monday/jitterbeast.gif"></td><!--Asian-->
+                    <td class="tdhover"><img class="imghover" src="images/monday/jitterbeast.gif"></td><!--Continental-->
+                    <td class="tdhover"><img class="imghover" src="images/monday/jitterbeast.gif"></td><!--Noodle-->
+                    <td class="tdhover"><img class="imghover" src="images/monday/jitterbeast.gif"></td><!--Japanese-->
+                    <td class="tdhover"><img class="imghover" src="images/monday/jitterbeast.gif"></td><!--Veggies-->
+                    <td class="tdhover"><img class="imghover" src="images/monday/jitterbeast.gif"></td><!--LIVE-->
                 </tr>
                 <tr>
-                    <td><img src="images/monday/jitterbeast.gif"></td><!--Asian-->
-                    <td><img src="images/monday/jitterbeast.gif"></td><!--Continental-->
-                    <td><img src="images/monday/jitterbeast.gif"></td><!--Noodle-->
-                    <td><img src="images/monday/jitterbeast.gif"></td><!--Japanese-->
-                    <td><img src="images/monday/jitterbeast.gif"></td><!--Veggies-->
-                    <td><img src="images/monday/jitterbeast.gif"></td><!--LIVE-->
+                    <td class="tdhover"><img class="imghover" src="images/monday/jitterbeast.gif"></td><!--Asian-->
+                    <td class="tdhover"><img class="imghover" src="images/monday/jitterbeast.gif"></td><!--Continental-->
+                    <td class="tdhover"><img class="imghover" src="images/monday/jitterbeast.gif"></td><!--Noodle-->
+                    <td class="tdhover"><img class="imghover" src="images/monday/jitterbeast.gif"></td><!--Japanese-->
+                    <td class="tdhover"><img class="imghover" src="images/monday/jitterbeast.gif"></td><!--Veggies-->
+                    <td class="tdhover"><img class="imghover" src="images/monday/jitterbeast.gif"></td><!--LIVE-->
                 </tr>
 
             </table>
@@ -187,36 +197,36 @@
                     <td>Live Station</td>
                 </tr>
                 <tr>
-                    <td><img src="images/monday/jitterbeast.gif"></td><!--Asian-->
-                    <td><img src="images/monday/jitterbeast.gif"></td><!--Continental-->
-                    <td><img src="images/monday/jitterbeast.gif"></td><!--Noodle-->
-                    <td><img src="images/monday/jitterbeast.gif"></td><!--Japanese-->
-                    <td><img src="images/monday/jitterbeast.gif"></td><!--Veggies-->
-                    <td><img src="images/monday/jitterbeast.gif"></td><!--LIVE-->
+                    <td class="tdhover"><img class="imghover" src="images/monday/jitterbeast.gif"></td><!--Asian-->
+                    <td class="tdhover"><img class="imghover" src="images/monday/jitterbeast.gif"></td><!--Continental-->
+                    <td class="tdhover"><img class="imghover" src="images/monday/jitterbeast.gif"></td><!--Noodle-->
+                    <td class="tdhover"><img class="imghover" src="images/monday/jitterbeast.gif"></td><!--Japanese-->
+                    <td class="tdhover"><img class="imghover" src="images/monday/jitterbeast.gif"></td><!--Veggies-->
+                    <td class="tdhover"><img class="imghover" src="images/monday/jitterbeast.gif"></td><!--LIVE-->
                 </tr>
                 <tr>
-                    <td><img src="images/monday/jitterbeast.gif"></td><!--Asian-->
-                    <td><img src="images/monday/jitterbeast.gif"></td><!--Continental-->
-                    <td><img src="images/monday/jitterbeast.gif"></td><!--Noodle-->
-                    <td><img src="images/monday/jitterbeast.gif"></td><!--Japanese-->
-                    <td><img src="images/monday/jitterbeast.gif"></td><!--Veggies-->
-                    <td><img src="images/monday/jitterbeast.gif"></td><!--LIVE-->
+                    <td class="tdhover"><img class="imghover" src="images/monday/jitterbeast.gif"></td><!--Asian-->
+                    <td class="tdhover"><img class="imghover" src="images/monday/jitterbeast.gif"></td><!--Continental-->
+                    <td class="tdhover"><img class="imghover" src="images/monday/jitterbeast.gif"></td><!--Noodle-->
+                    <td class="tdhover"><img class="imghover" src="images/monday/jitterbeast.gif"></td><!--Japanese-->
+                    <td class="tdhover"><img class="imghover" src="images/monday/jitterbeast.gif"></td><!--Veggies-->
+                    <td class="tdhover"><img class="imghover" src="images/monday/jitterbeast.gif"></td><!--LIVE-->
                 </tr>
                 <tr>
-                    <td><img src="images/monday/jitterbeast.gif"></td><!--Asian-->
-                    <td><img src="images/monday/jitterbeast.gif"></td><!--Continental-->
-                    <td><img src="images/monday/jitterbeast.gif"></td><!--Noodle-->
-                    <td><img src="images/monday/jitterbeast.gif"></td><!--Japanese-->
-                    <td><img src="images/monday/jitterbeast.gif"></td><!--Veggies-->
-                    <td><img src="images/monday/jitterbeast.gif"></td><!--LIVE-->
+                    <td class="tdhover"><img class="imghover" src="images/monday/jitterbeast.gif"></td><!--Asian-->
+                    <td class="tdhover"><img class="imghover" src="images/monday/jitterbeast.gif"></td><!--Continental-->
+                    <td class="tdhover"><img class="imghover" src="images/monday/jitterbeast.gif"></td><!--Noodle-->
+                    <td class="tdhover"><img class="imghover" src="images/monday/jitterbeast.gif"></td><!--Japanese-->
+                    <td class="tdhover"><img class="imghover" src="images/monday/jitterbeast.gif"></td><!--Veggies-->
+                    <td class="tdhover"><img class="imghover" src="images/monday/jitterbeast.gif"></td><!--LIVE-->
                 </tr>
                 <tr>
-                    <td><img src="images/monday/jitterbeast.gif"></td><!--Asian-->
-                    <td><img src="images/monday/jitterbeast.gif"></td><!--Continental-->
-                    <td><img src="images/monday/jitterbeast.gif"></td><!--Noodle-->
-                    <td><img src="images/monday/jitterbeast.gif"></td><!--Japanese-->
-                    <td><img src="images/monday/jitterbeast.gif"></td><!--Veggies-->
-                    <td><img src="images/monday/jitterbeast.gif"></td><!--LIVE-->
+                    <td class="tdhover"><img class="imghover" src="images/monday/jitterbeast.gif"></td><!--Asian-->
+                    <td class="tdhover"><img class="imghover" src="images/monday/jitterbeast.gif"></td><!--Continental-->
+                    <td class="tdhover"><img class="imghover" src="images/monday/jitterbeast.gif"></td><!--Noodle-->
+                    <td class="tdhover"><img class="imghover" src="images/monday/jitterbeast.gif"></td><!--Japanese-->
+                    <td class="tdhover"><img class="imghover" src="images/monday/jitterbeast.gif"></td><!--Veggies-->
+                    <td class="tdhover"><img class="imghover" src="images/monday/jitterbeast.gif"></td><!--LIVE-->
                 </tr>
 
             </table>
@@ -236,36 +246,36 @@
                     <td>Live Station</td>
                 </tr>
                 <tr>
-                    <td><img src="images/monday/jitterbeast.gif"></td><!--Asian-->
-                    <td><img src="images/monday/jitterbeast.gif"></td><!--Continental-->
-                    <td><img src="images/monday/jitterbeast.gif"></td><!--Noodle-->
-                    <td><img src="images/monday/jitterbeast.gif"></td><!--Japanese-->
-                    <td><img src="images/monday/jitterbeast.gif"></td><!--Veggies-->
-                    <td><img src="images/monday/jitterbeast.gif"></td><!--LIVE-->
+                    <td class="tdhover"><img class="imghover" src="images/monday/jitterbeast.gif"></td><!--Asian-->
+                    <td class="tdhover"><img class="imghover" src="images/monday/jitterbeast.gif"></td><!--Continental-->
+                    <td class="tdhover"><img class="imghover" src="images/monday/jitterbeast.gif"></td><!--Noodle-->
+                    <td class="tdhover"><img class="imghover" src="images/monday/jitterbeast.gif"></td><!--Japanese-->
+                    <td class="tdhover"><img class="imghover" src="images/monday/jitterbeast.gif"></td><!--Veggies-->
+                    <td class="tdhover"><img class="imghover" src="images/monday/jitterbeast.gif"></td><!--LIVE-->
                 </tr>
                 <tr>
-                    <td><img src="images/monday/jitterbeast.gif"></td><!--Asian-->
-                    <td><img src="images/monday/jitterbeast.gif"></td><!--Continental-->
-                    <td><img src="images/monday/jitterbeast.gif"></td><!--Noodle-->
-                    <td><img src="images/monday/jitterbeast.gif"></td><!--Japanese-->
-                    <td><img src="images/monday/jitterbeast.gif"></td><!--Veggies-->
-                    <td><img src="images/monday/jitterbeast.gif"></td><!--LIVE-->
+                    <td class="tdhover"><img class="imghover" src="images/monday/jitterbeast.gif"></td><!--Asian-->
+                    <td class="tdhover"><img class="imghover" src="images/monday/jitterbeast.gif"></td><!--Continental-->
+                    <td class="tdhover"><img class="imghover" src="images/monday/jitterbeast.gif"></td><!--Noodle-->
+                    <td class="tdhover"><img class="imghover" src="images/monday/jitterbeast.gif"></td><!--Japanese-->
+                    <td class="tdhover"><img class="imghover" src="images/monday/jitterbeast.gif"></td><!--Veggies-->
+                    <td class="tdhover"><img class="imghover" src="images/monday/jitterbeast.gif"></td><!--LIVE-->
                 </tr>
                 <tr>
-                    <td><img src="images/monday/jitterbeast.gif"></td><!--Asian-->
-                    <td><img src="images/monday/jitterbeast.gif"></td><!--Continental-->
-                    <td><img src="images/monday/jitterbeast.gif"></td><!--Noodle-->
-                    <td><img src="images/monday/jitterbeast.gif"></td><!--Japanese-->
-                    <td><img src="images/monday/jitterbeast.gif"></td><!--Veggies-->
-                    <td><img src="images/monday/jitterbeast.gif"></td><!--LIVE-->
+                    <td class="tdhover"><img class="imghover" src="images/monday/jitterbeast.gif"></td><!--Asian-->
+                    <td class="tdhover"><img class="imghover" src="images/monday/jitterbeast.gif"></td><!--Continental-->
+                    <td class="tdhover"><img class="imghover" src="images/monday/jitterbeast.gif"></td><!--Noodle-->
+                    <td class="tdhover"><img class="imghover" src="images/monday/jitterbeast.gif"></td><!--Japanese-->
+                    <td class="tdhover"><img class="imghover" src="images/monday/jitterbeast.gif"></td><!--Veggies-->
+                    <td class="tdhover"><img class="imghover" src="images/monday/jitterbeast.gif"></td><!--LIVE-->
                 </tr>
                 <tr>
-                    <td><img src="images/monday/jitterbeast.gif"></td><!--Asian-->
-                    <td><img src="images/monday/jitterbeast.gif"></td><!--Continental-->
-                    <td><img src="images/monday/jitterbeast.gif"></td><!--Noodle-->
-                    <td><img src="images/monday/jitterbeast.gif"></td><!--Japanese-->
-                    <td><img src="images/monday/jitterbeast.gif"></td><!--Veggies-->
-                    <td><img src="images/monday/jitterbeast.gif"></td><!--LIVE-->
+                    <td class="tdhover"><img class="imghover" src="images/monday/jitterbeast.gif"></td><!--Asian-->
+                    <td class="tdhover"><img class="imghover" src="images/monday/jitterbeast.gif"></td><!--Continental-->
+                    <td class="tdhover"><img class="imghover" src="images/monday/jitterbeast.gif"></td><!--Noodle-->
+                    <td class="tdhover"><img class="imghover" src="images/monday/jitterbeast.gif"></td><!--Japanese-->
+                    <td class="tdhover"><img class="imghover" src="images/monday/jitterbeast.gif"></td><!--Veggies-->
+                    <td class="tdhover"><img class="imghover" src="images/monday/jitterbeast.gif"></td><!--LIVE-->
                 </tr>
 
             </table>
@@ -285,36 +295,36 @@
                     <td>Live Station</td>
                 </tr>
                 <tr>
-                    <td><img src="images/monday/jitterbeast.gif"></td><!--Asian-->
-                    <td><img src="images/monday/jitterbeast.gif"></td><!--Continental-->
-                    <td><img src="images/monday/jitterbeast.gif"></td><!--Noodle-->
-                    <td><img src="images/monday/jitterbeast.gif"></td><!--Japanese-->
-                    <td><img src="images/monday/jitterbeast.gif"></td><!--Veggies-->
-                    <td><img src="images/monday/jitterbeast.gif"></td><!--LIVE-->
+                    <td class="tdhover"><img class="imghover" src="images/monday/jitterbeast.gif"></td><!--Asian-->
+                    <td class="tdhover"><img class="imghover" src="images/monday/jitterbeast.gif"></td><!--Continental-->
+                    <td class="tdhover"><img class="imghover" src="images/monday/jitterbeast.gif"></td><!--Noodle-->
+                    <td class="tdhover"><img class="imghover" src="images/monday/jitterbeast.gif"></td><!--Japanese-->
+                    <td class="tdhover"><img class="imghover" src="images/monday/jitterbeast.gif"></td><!--Veggies-->
+                    <td class="tdhover"><img class="imghover" src="images/monday/jitterbeast.gif"></td><!--LIVE-->
                 </tr>
                 <tr>
-                    <td><img src="images/monday/jitterbeast.gif"></td><!--Asian-->
-                    <td><img src="images/monday/jitterbeast.gif"></td><!--Continental-->
-                    <td><img src="images/monday/jitterbeast.gif"></td><!--Noodle-->
-                    <td><img src="images/monday/jitterbeast.gif"></td><!--Japanese-->
-                    <td><img src="images/monday/jitterbeast.gif"></td><!--Veggies-->
-                    <td><img src="images/monday/jitterbeast.gif"></td><!--LIVE-->
+                    <td class="tdhover"><img class="imghover" src="images/monday/jitterbeast.gif"></td><!--Asian-->
+                    <td class="tdhover"><img class="imghover" src="images/monday/jitterbeast.gif"></td><!--Continental-->
+                    <td class="tdhover"><img class="imghover" src="images/monday/jitterbeast.gif"></td><!--Noodle-->
+                    <td class="tdhover"><img class="imghover" src="images/monday/jitterbeast.gif"></td><!--Japanese-->
+                    <td class="tdhover"><img class="imghover" src="images/monday/jitterbeast.gif"></td><!--Veggies-->
+                    <td class="tdhover"><img class="imghover" src="images/monday/jitterbeast.gif"></td><!--LIVE-->
                 </tr>
                 <tr>
-                    <td><img src="images/monday/jitterbeast.gif"></td><!--Asian-->
-                    <td><img src="images/monday/jitterbeast.gif"></td><!--Continental-->
-                    <td><img src="images/monday/jitterbeast.gif"></td><!--Noodle-->
-                    <td><img src="images/monday/jitterbeast.gif"></td><!--Japanese-->
-                    <td><img src="images/monday/jitterbeast.gif"></td><!--Veggies-->
-                    <td><img src="images/monday/jitterbeast.gif"></td><!--LIVE-->
+                    <td class="tdhover"><img class="imghover" src="images/monday/jitterbeast.gif"></td><!--Asian-->
+                    <td class="tdhover"><img class="imghover" src="images/monday/jitterbeast.gif"></td><!--Continental-->
+                    <td class="tdhover"><img class="imghover" src="images/monday/jitterbeast.gif"></td><!--Noodle-->
+                    <td class="tdhover"><img class="imghover" src="images/monday/jitterbeast.gif"></td><!--Japanese-->
+                    <td class="tdhover"><img class="imghover" src="images/monday/jitterbeast.gif"></td><!--Veggies-->
+                    <td class="tdhover"><img class="imghover" src="images/monday/jitterbeast.gif"></td><!--LIVE-->
                 </tr>
                 <tr>
-                    <td><img src="images/monday/jitterbeast.gif"></td><!--Asian-->
-                    <td><img src="images/monday/jitterbeast.gif"></td><!--Continental-->
-                    <td><img src="images/monday/jitterbeast.gif"></td><!--Noodle-->
-                    <td><img src="images/monday/jitterbeast.gif"></td><!--Japanese-->
-                    <td><img src="images/monday/jitterbeast.gif"></td><!--Veggies-->
-                    <td><img src="images/monday/jitterbeast.gif"></td><!--LIVE-->
+                    <td class="tdhover"><img class="imghover" src="images/monday/jitterbeast.gif"></td><!--Asian-->
+                    <td class="tdhover"><img class="imghover" src="images/monday/jitterbeast.gif"></td><!--Continental-->
+                    <td class="tdhover"><img class="imghover" src="images/monday/jitterbeast.gif"></td><!--Noodle-->
+                    <td class="tdhover"><img class="imghover" src="images/monday/jitterbeast.gif"></td><!--Japanese-->
+                    <td class="tdhover"><img class="imghover" src="images/monday/jitterbeast.gif"></td><!--Veggies-->
+                    <td class="tdhover"><img class="imghover" src="images/monday/jitterbeast.gif"></td><!--LIVE-->
                 </tr>
 
             </table>
@@ -334,36 +344,36 @@
                     <td>Live Station</td>
                 </tr>
                 <tr>
-                    <td><img src="images/monday/jitterbeast.gif"></td><!--Asian-->
-                    <td><img src="images/monday/jitterbeast.gif"></td><!--Continental-->
-                    <td><img src="images/monday/jitterbeast.gif"></td><!--Noodle-->
-                    <td><img src="images/monday/jitterbeast.gif"></td><!--Japanese-->
-                    <td><img src="images/monday/jitterbeast.gif"></td><!--Veggies-->
-                    <td><img src="images/monday/jitterbeast.gif"></td><!--LIVE-->
+                    <td class="tdhover"><img class="imghover" src="images/monday/jitterbeast.gif"></td><!--Asian-->
+                    <td class="tdhover"><img class="imghover" src="images/monday/jitterbeast.gif"></td><!--Continental-->
+                    <td class="tdhover"><img class="imghover" src="images/monday/jitterbeast.gif"></td><!--Noodle-->
+                    <td class="tdhover"><img class="imghover" src="images/monday/jitterbeast.gif"></td><!--Japanese-->
+                    <td class="tdhover"><img class="imghover" src="images/monday/jitterbeast.gif"></td><!--Veggies-->
+                    <td class="tdhover"><img class="imghover" src="images/monday/jitterbeast.gif"></td><!--LIVE-->
                 </tr>
                 <tr>
-                    <td><img src="images/monday/jitterbeast.gif"></td><!--Asian-->
-                    <td><img src="images/monday/jitterbeast.gif"></td><!--Continental-->
-                    <td><img src="images/monday/jitterbeast.gif"></td><!--Noodle-->
-                    <td><img src="images/monday/jitterbeast.gif"></td><!--Japanese-->
-                    <td><img src="images/monday/jitterbeast.gif"></td><!--Veggies-->
-                    <td><img src="images/monday/jitterbeast.gif"></td><!--LIVE-->
+                    <td class="tdhover"><img class="imghover" src="images/monday/jitterbeast.gif"></td><!--Asian-->
+                    <td class="tdhover"><img class="imghover" src="images/monday/jitterbeast.gif"></td><!--Continental-->
+                    <td class="tdhover"><img class="imghover" src="images/monday/jitterbeast.gif"></td><!--Noodle-->
+                    <td class="tdhover"><img class="imghover" src="images/monday/jitterbeast.gif"></td><!--Japanese-->
+                    <td class="tdhover"><img class="imghover" src="images/monday/jitterbeast.gif"></td><!--Veggies-->
+                    <td class="tdhover"><img class="imghover" src="images/monday/jitterbeast.gif"></td><!--LIVE-->
                 </tr>
                 <tr>
-                    <td><img src="images/monday/jitterbeast.gif"></td><!--Asian-->
-                    <td><img src="images/monday/jitterbeast.gif"></td><!--Continental-->
-                    <td><img src="images/monday/jitterbeast.gif"></td><!--Noodle-->
-                    <td><img src="images/monday/jitterbeast.gif"></td><!--Japanese-->
-                    <td><img src="images/monday/jitterbeast.gif"></td><!--Veggies-->
-                    <td><img src="images/monday/jitterbeast.gif"></td><!--LIVE-->
+                    <td class="tdhover"><img class="imghover" src="images/monday/jitterbeast.gif"></td><!--Asian-->
+                    <td class="tdhover"><img class="imghover" src="images/monday/jitterbeast.gif"></td><!--Continental-->
+                    <td class="tdhover"><img class="imghover" src="images/monday/jitterbeast.gif"></td><!--Noodle-->
+                    <td class="tdhover"><img class="imghover" src="images/monday/jitterbeast.gif"></td><!--Japanese-->
+                    <td class="tdhover"><img class="imghover" src="images/monday/jitterbeast.gif"></td><!--Veggies-->
+                    <td class="tdhover"><img class="imghover" src="images/monday/jitterbeast.gif"></td><!--LIVE-->
                 </tr>
                 <tr>
-                    <td><img src="images/monday/jitterbeast.gif"></td><!--Asian-->
-                    <td><img src="images/monday/jitterbeast.gif"></td><!--Continental-->
-                    <td><img src="images/monday/jitterbeast.gif"></td><!--Noodle-->
-                    <td><img src="images/monday/jitterbeast.gif"></td><!--Japanese-->
-                    <td><img src="images/monday/jitterbeast.gif"></td><!--Veggies-->
-                    <td><img src="images/monday/jitterbeast.gif"></td><!--LIVE-->
+                    <td class="tdhover"><img class="imghover" src="images/monday/jitterbeast.gif"></td><!--Asian-->
+                    <td class="tdhover"><img class="imghover" src="images/monday/jitterbeast.gif"></td><!--Continental-->
+                    <td class="tdhover"><img class="imghover" src="images/monday/jitterbeast.gif"></td><!--Noodle-->
+                    <td class="tdhover"><img class="imghover" src="images/monday/jitterbeast.gif"></td><!--Japanese-->
+                    <td class="tdhover"><img class="imghover" src="images/monday/jitterbeast.gif"></td><!--Veggies-->
+                    <td class="tdhover"><img class="imghover" src="images/monday/jitterbeast.gif"></td><!--LIVE-->
                 </tr>
 
             </table>
