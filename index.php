@@ -1,0 +1,175 @@
+<?php
+$foodArray = ["asian","continental","noodle","japanese","veggies","live"];
+$dayArray = ["Monday","Tuesday","Wednesday","Thursday","Friday"];
+$lDayArray = ["monday","tuesday","wednesday","thursday","friday"];
+$cache = array();
+if(file_exists("editor/phpcache")){
+	$cache = unserialize(file_get_contents("editor/phpcache"));//array associating filename to extension
+}
+?>
+<head>
+	<title>Caffeteria</title>
+	<!--Load dem Css files-->
+	<link rel="stylesheet" type="text/css" href="jquery.fullPage.css" />
+	<link rel="stylesheet" type="text/css" href="style.css" />
+
+	<!--Temp Css Loader-->
+	<style>
+
+	/* Main Text Styles
+	----------------------------------------*/
+	h1{
+		font-size: 2em;
+		font-family: arial,helvetica;
+		color: #fff;
+		margin:0;
+		margin-top: -30px;
+		padding:30px 0 0 0;
+	}
+	.intro p{
+		color: #fff;
+		padding:40px 0 0 0;
+	}
+
+	body{
+		font-family: arial,helvetica;
+		color: #333;
+	}
+
+	/* Section Styling
+	* --------------------------------------- */
+	.section{
+		text-align:center;
+	}
+
+	/* Page 1 Navigation
+	* --------------------------------------- */
+	nav ul li{
+		display:inline-block;
+		font-size:2em;
+		padding-left:2vw;
+		padding-right:2vw;
+		padding-top: 5vh;
+	}
+
+	a{
+		color:black;
+	}
+	/* Individual Dates
+	* --------------------------------------- */
+	#slide1{
+		background-color:chocolate;
+	}
+	#slide2{
+		background-color: aqua;
+	}
+	#slide3{
+		background-color: aquamarine;
+	}
+	#slide4{
+		background-color: darkmagenta;
+	}
+	#slide5{
+		background-color: darksalmon;
+	}
+
+	/* Individual Dates
+	* --------------------------------------- */
+	table{
+		margin: 0 auto;
+	}
+	table td{
+		padding:10px;
+	}
+	table tr td img{
+		width:10vw;
+	}
+	</style>
+
+	<!--Javascript/JQuery-->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+	<!--Load the plugin-->
+	<!--Fullpage.js-->
+	<script type="text/javascript" src="jquery.slimscroll.min.js"></script>
+	<script type="text/javascript" src="jquery.fullPage.js"></script>
+
+	<!--Modal Stuff-->
+	<script src="jquery.modal.min.js" type="text/javascript" charset="utf-8"></script>
+	<link rel="stylesheet" href="jquery.modal.css" type="text/css" media="screen" />
+
+	<!--Custom JS for later-->
+	<script src="js.js"></script>
+	<!--Settings for scroll plugin-->
+	<script type="text/javascript">
+	$(document).ready(function() {
+		$('#fullpage').fullpage({
+			anchors: ['firstPage', 'secondPage', '3rdPage'],
+			sectionsColor: ['#4A6FB1', '#939FAA', 'red'],
+			scrollingSpeed: 300,
+			scrollOverflow: true
+		});
+	});
+	</script>
+
+</head>
+<body>
+	<div id="fullpage">
+		<div class="section" id="section0">
+			<div class="intro">
+				<h1>ISB Cafeteria Menu</h1>
+				<nav><!--Nav to let people click on the day of the week-->
+					<ul>
+						<li><a href="#secondPage/slide1">Monday</a></li>
+						<li><a href="#secondPage/slide2">Tuesday</a></li>
+						<li><a href="#secondPage/slide3">Wednesday</a></li>
+						<li><a href="#secondPage/slide4">Thursday</a></li>
+						<li><a href="#secondPage/slide5">Friday</a></li>
+
+					</ul>
+				</nav>
+			</div>
+		</div>
+		<div id="infomodal" style="display:none;">
+			<p>
+				<div id="foodInfo"></div>
+			</p>
+		</div>
+		<div class="section" id="section1">
+			<?php
+			for($day=0;$day<5;$day++){
+				echo "<div class='slide' id='slide".($day+1)."' data-anchor='slide".($day+1)."'>".
+				"\n<h1>".$dayArray[$day]."</h1>
+				<div class='menu'>
+				<table>
+				<tr>
+				<td>Asian</td>
+				<td>Continental</td>
+				<td>Noodle</td>
+				<td>Japanese</td>
+				<td>Vegetarian/Salads</td>
+				<td>Live Station</td>
+				</tr>";
+				for($row=0;$row<4;$row++){
+					echo "<tr>\n";
+					for($col=0;$col<6;$col++){
+						echo "<td class='tdhover'><img class='imghover' src='editor/images/".$lDayArray[$day].
+						$foodArray[$col].($row+1).".".$cache[$lDayArray[$day].$foodArray[$col].($row+1)]."'>\n";
+					}
+					echo "</tr>\n";
+				}
+				echo "</table>".
+				"\n</div>".
+				"\n</div>";
+			}
+			?>
+		</div>
+		<div class="section" id="section2">
+			<div class="intro">
+				<h2 style="font-size:3em">Made by the Software Development Club</h2>
+				<h3>and the Student Council</h3>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
