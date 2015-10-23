@@ -30,6 +30,9 @@ if(file_exists("editor/phpcache")){
 		color: #fff;
 		padding:40px 0 0 0;
 	}
+        .intro{
+            margin-top: 0vh;
+        }
 
 	body{
 		font-family: arial,helvetica;
@@ -41,6 +44,7 @@ if(file_exists("editor/phpcache")){
 	.section{
 		text-align:center;
 	}
+
 
 	/* Page 1 Navigation
 	* --------------------------------------- */
@@ -84,6 +88,66 @@ if(file_exists("editor/phpcache")){
 	table tr td img{
 		width:10vw;
 	}
+        
+        
+    /*
+        */
+    .menubar {
+        background-color: #484A47;
+        left: -100vw;  
+        position: fixed;
+        height:10vh;
+        width:100vw;
+        
+    }
+    .menuholder{
+        height:10vh;
+        position: relative;
+
+    }
+
+
+    .menubar ul {
+        list-style: none;
+        position: absolute;
+        margin: auto;
+        padding-top: 3vh;
+
+        }
+
+    .menubar li {
+        display: inline-block;
+        padding-left: 3vw;
+
+
+    }
+
+    .menubar a {
+        color: #ECEBF0;
+        font-size: 15px;
+
+    }
+
+    .button-close {
+
+
+        
+    }
+
+    .menuclicky {
+        color: white;
+        width: 7.5vw;
+        padding-top: 3vh;
+        text-align: center;
+        text-decoration: none;
+        text-transform: uppercase;
+        transition: all 0.2s ease-in;
+        cursor:pointer;
+    }
+    
+        
+
+
 	</style>
 
 	<!--Javascript/JQuery-->
@@ -107,6 +171,8 @@ if(file_exists("editor/phpcache")){
 			anchors: ['firstPage', 'secondPage', '3rdPage'],
 			sectionsColor: ['#4A6FB1', '#939FAA', 'red'],
 			scrollingSpeed: 300,
+            autoScrolling:false,
+            scrollBar: true,
 			scrollOverflow: true
 		});
 	});
@@ -115,28 +181,25 @@ if(file_exists("editor/phpcache")){
 </head>
 <body>
 	<div id="fullpage">
-		<div class="section" id="section0">
-			<div class="intro">
-				<h1>ISB Cafeteria Menu</h1>
-				<nav><!--Nav to let people click on the day of the week-->
-					<ul>
-						<li><a href="#secondPage/slide1">Monday</a></li>
-						<li><a href="#secondPage/slide2">Tuesday</a></li>
-						<li><a href="#secondPage/slide3">Wednesday</a></li>
-						<li><a href="#secondPage/slide4">Thursday</a></li>
-						<li><a href="#secondPage/slide5">Friday</a></li>
 
-					</ul>
-				</nav>
-			</div>
-		</div>
-		<div id="infomodal" style="display:none;">
-			<p>
-				<div id="foodInfo"></div>
-			</p>
-		</div>
-		<div class="section" id="section1">
-			<?php
+	<div class="section" id="section1">
+        <div class="menuholder">
+        <div class="menubar">
+            <ul>
+                <li><a class="button-close">Close</a></li>
+                <li><a href="#slide1">Monday</a></li>
+                <li><a href="#slide2">Tuesday</a></li>
+                <li><a href="#slide3">Wednesday</a></li>
+                <li><a href="#slide4">Thursday</a></li>
+                <li><a href="#slide5">Friday</a></li>
+            </ul>
+        </div>
+        <div class="menuclicky">
+            Menu
+        </div>
+        </div>
+        <div class="intro">
+	    			<?php
 			for($day=0;$day<5;$day++){
 				echo "<div class='slide' id='slide".($day+1)."' data-anchor='slide".($day+1)."'>".
 				"\n<h1>".$dayArray[$day]."</h1>
@@ -163,13 +226,9 @@ if(file_exists("editor/phpcache")){
 				"\n</div>";
 			}
 			?>
-		</div>
-		<div class="section" id="section2">
-			<div class="intro">
-				<h2 style="font-size:3em">Made by the Software Development Club</h2>
-				<h3>and the Student Council</h3>
-			</div>
-		</div>
+        </div>
 	</div>
+	
+</div>
 </body>
 </html>

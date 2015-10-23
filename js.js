@@ -10,31 +10,35 @@ var main = function() {
     });*/
     
     
-  $('.column').hover(function() {
-    $('.column').animate({
-      left: "0px"
+  $('.menuclicky').click(function() {
+    $('.menuclicky').animate({
+      left: "-100vw"
+    }, 200);
+    
+       $('.menubar').animate({
+      left: "0vw"
     }, 200);
 
     $('body').animate({
-      left: "285px"
+      left: "100vw"
     }, 200);
   });
 
     
  $('.button-close').click(function () {
-    $('.menu').animate({
-                left: "-285px"
+    $('.menubar').animate({
+                left: "-100vw"
     }, 200);
-
+     $('.menuclicky').animate({
+      left: "0vw"
+    }, 200);
     $('body').animate({
-      left: "0px"
+      left: "0vw"
     }, 200);
 
   });
 
 };
-
-
 
 
 /*var hide = function() {
