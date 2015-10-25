@@ -23,16 +23,13 @@ if(file_exists("editor/phpcache")){
 		font-family: arial,helvetica;
 		color: #fff;
 		margin:0;
-		margin-top: -30px;
+		margin-top: -50px;
 		padding:30px 0 0 0;
 	}
 	.intro p{
 		color: #fff;
 		padding:40px 0 0 0;
 	}
-        .intro{
-            margin-top: 0vh;
-        }
 
 	body{
 		font-family: arial,helvetica;
@@ -231,4 +228,13 @@ if(file_exists("editor/phpcache")){
 	
 </div>
 </body>
+<script type="text/javascript">
+var main = function (){
+$('img').error(function(){
+        $(this).attr('src', 'images/monday/jitterbeast.gif');
+});
+};
+$( document ).ready(main);
+
+</script>
 </html>
