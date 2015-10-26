@@ -34,12 +34,14 @@ if(file_exists("editor/phpcache")){
 	body{
 		font-family: arial,helvetica;
 		color: #333;
+        height:200vh;
 	}
 
 	/* Section Styling
 	* --------------------------------------- */
 	.section{
 		text-align:center;
+        position: relative;
 	}
 
 
@@ -56,13 +58,18 @@ if(file_exists("editor/phpcache")){
 	a{
 		color:black;
 	}
+        .slide{
+        margin-top:-40vh;
+        }
 	/* Individual Dates
 	* --------------------------------------- */
 	#slide1{
 		background-color:chocolate;
+        
 	}
 	#slide2{
 		background-color: aqua;
+        
 	}
 	#slide3{
 		background-color: aquamarine;
@@ -85,6 +92,9 @@ if(file_exists("editor/phpcache")){
 	table tr td img{
 		width:10vw;
 	}
+        .fp-controlArrow{
+            margin-top:-40vh;
+        }
         
         
     /*
@@ -233,6 +243,10 @@ var main = function (){
 $('img').error(function(){
         $(this).attr('src', 'images/monday/jitterbeast.gif');
 });
+
+$('.section').css("width", "100px");
+
+$('.section').css("width", "100%");
 };
 $( document ).ready(main);
 
