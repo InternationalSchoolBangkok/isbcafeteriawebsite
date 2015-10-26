@@ -3,6 +3,7 @@
 img{
 	width:100px;
 }
+
 </style>
 <?php
 $foodArray = ["asian","continental","noodle","japanese","veggies","live"];
@@ -36,6 +37,10 @@ if(file_exists("phpcache")){
 				"\n<form action='upload.php' method='post' enctype='multipart/form-data'>".
 				"\n<input type='file' name='".$lDayArray[$day].$foodArray[$col].($row+1)."'>".
 				"\n<input type='submit'>".
+				"\n</form>".     
+                /*Delete Form*/
+                "\n<form action='delete.php' method='post'>".
+				"\n<input type='submit' name='delete' value='Delete'/>".
 				"\n</form>".
 				"\n</td>";
 			}

@@ -199,6 +199,7 @@ if(file_exists("editor/phpcache")){
                 <li><a href="#slide3">Wednesday</a></li>
                 <li><a href="#slide4">Thursday</a></li>
                 <li><a href="#slide5">Friday</a></li>
+                <li><a href="editor/pass.php">Upload</a></li>
             </ul>
         </div>
         <div class="menuclicky">
@@ -241,7 +242,7 @@ if(file_exists("editor/phpcache")){
 <script type="text/javascript">
 var main = function (){
 $('img').error(function(){
-        $(this).attr('src', 'images/monday/jitterbeast.gif');
+        $(this).attr('src', 'images/monday/blankerino.png');
 });
 
 $('.section').css("width", "100px");
