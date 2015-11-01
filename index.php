@@ -64,7 +64,7 @@ if(file_exists("editor/phpcache")){
 	/* Individual Dates
 	* --------------------------------------- */
 	#slide1{
-		background-color:chocolate;
+		background-color:#7EE081;
         
 	}
 	#slide2{
@@ -72,7 +72,7 @@ if(file_exists("editor/phpcache")){
         
 	}
 	#slide3{
-		background-color: aquamarine;
+		background-color: darkorange;
 	}
 	#slide4{
 		background-color: darkmagenta;
@@ -91,6 +91,7 @@ if(file_exists("editor/phpcache")){
 	}
 	table tr td img{
 		width:10vw;
+
 	}
         .fp-controlArrow{
             margin-top:-40vh;
@@ -143,7 +144,7 @@ if(file_exists("editor/phpcache")){
 
     .menuclicky {
         color: white;
-        width: 7.5vw;
+        width: 100%w;
         padding-top: 3vh;
         text-align: center;
         text-decoration: none;
@@ -151,6 +152,15 @@ if(file_exists("editor/phpcache")){
         transition: all 0.2s ease-in;
         cursor:pointer;
     }
+        .menuclicky span{
+            float:left;
+            margin-left:3vw;
+        }
+        .menuclicky p {
+            float:right;
+            margin-right:3vw;
+
+        }
     
         
 
@@ -203,14 +213,18 @@ if(file_exists("editor/phpcache")){
             </ul>
         </div>
         <div class="menuclicky">
-            Menu
+            <span>Menu</span> 
+            <p>disclaimer: menu subject to change without prior notice depending on availability</p>                    
         </div>
         </div>
         <div class="intro">
+            
 	    			<?php
 			for($day=0;$day<5;$day++){
-				echo "<div class='slide' id='slide".($day+1)."' data-anchor='slide".($day+1)."'>".
-				"\n<h1>".$dayArray[$day]."</h1>
+				echo "
+                <div class='slide' id='slide".($day+1)."' data-anchor='slide".($day+1)."'>".
+				"\n
+                <h1>".$dayArray[$day]."</h1>
 				<div class='menu'>
 				<table>
 				<tr>
