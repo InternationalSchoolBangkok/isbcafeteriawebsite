@@ -34,7 +34,7 @@ if(file_exists("editor/phpcache")){
 	body{
 		font-family: arial,helvetica;
 		color: #333;
-        height:200vh;
+        height:100%;
 	}
 
 	/* Section Styling
@@ -42,6 +42,7 @@ if(file_exists("editor/phpcache")){
 	.section{
 		text-align:center;
         position: relative;
+        height:10vh;
 	}
 
 
@@ -59,7 +60,7 @@ if(file_exists("editor/phpcache")){
 		color:black;
 	}
         .slide{
-        margin-top:-40vh;
+        margin-top:-0vh;
         }
 	/* Individual Dates
 	* --------------------------------------- */
@@ -87,15 +88,26 @@ if(file_exists("editor/phpcache")){
 		margin: 0 auto;
 	}
 	table td{
-		padding:10px;
-	}
-	table tr td img{
-		width:10vw;
+        10vw;
+        text-align: center;
+        padding-left:1vw;
+        padding-right:1vw;
 
 	}
-        .fp-controlArrow{
-            margin-top:-40vh;
-        }
+	table tr td img{
+        width:100px;
+        height:100px;
+
+       object-fit: cover;
+
+	}
+    /*Cropping*/    
+    
+ 
+        
+    .fp-controlArrow{
+         margin-top:-0vh;
+     }
         
         
     /*
@@ -186,7 +198,7 @@ if(file_exists("editor/phpcache")){
 	$(document).ready(function() {
 		$('#fullpage').fullpage({
 			anchors: ['firstPage', 'secondPage', '3rdPage'],
-			sectionsColor: ['#4A6FB1', '#939FAA', 'red'],
+			sectionsColor: ['#4A6FB1'],
 			scrollingSpeed: 300,
             autoScrolling:false,
             scrollBar: true,
@@ -225,7 +237,7 @@ if(file_exists("editor/phpcache")){
                 <div class='slide' id='slide".($day+1)."' data-anchor='slide".($day+1)."'>".
 				"\n
                 <h1>".$dayArray[$day]."</h1>
-				<div class='menu'>
+				<div class='menu crop'>
 				<table>
 				<tr>
 				<td>Asian</td>
