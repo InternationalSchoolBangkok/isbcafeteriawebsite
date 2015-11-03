@@ -12,6 +12,8 @@ if(file_exists("editor/phpcache")){
 	<!--Load dem Css files-->
 	<link rel="stylesheet" type="text/css" href="jquery.fullPage.css" />
 	<link rel="stylesheet" type="text/css" href="style.css" />
+    <script src="jquery.modal.min.js" type="text/javascript" charset="utf-8"></script>
+    <link rel="stylesheet" href="jquery.modal.css" type="text/css" media="screen" />
 
 	<!--Temp Css Loader-->
 	<style>
@@ -26,6 +28,7 @@ if(file_exists("editor/phpcache")){
 		margin-top: -50px;
 		padding:30px 0 0 0;
 	}
+
 	.intro p{
 		color: #fff;
 		padding:40px 0 0 0;
@@ -35,6 +38,8 @@ if(file_exists("editor/phpcache")){
 		font-family: arial,helvetica;
 		color: #333;
         height:100%;
+        width:100vw;
+        position: relative;
 	}
 
 	/* Section Styling
@@ -42,7 +47,6 @@ if(file_exists("editor/phpcache")){
 	.section{
 		text-align:center;
         position: relative;
-        height:10vh;
 	}
 
 
@@ -60,7 +64,10 @@ if(file_exists("editor/phpcache")){
 		color:black;
 	}
         .slide{
-        margin-top:-0vh;
+        padding-top:5vh;
+        width:100vw;
+        position: relative;
+
         }
 	/* Individual Dates
 	* --------------------------------------- */
@@ -88,42 +95,27 @@ if(file_exists("editor/phpcache")){
 		margin: 0 auto;
 	}
 	table td{
-        10vw;
-        text-align: center;
-        padding-left:1vw;
-        padding-right:1vw;
-
+		padding:10px;
 	}
 	table tr td img{
-        width:100px;
-        height:100px;
-
-       object-fit: cover;
+		width:10vw;
 
 	}
-    /*Cropping*/    
-    
- 
-        
-    .fp-controlArrow{
-         margin-top:-0vh;
-     }
-        
+        .fp-controlArrow{
+            margin-top:0vh;
+        }
+
         
     /*
         */
     .menubar {
         background-color: #484A47;
-        left: -100vw;  
+        left: -10vw;  
         position: fixed;
-        height:10vh;
-        width:100vw;
+        height:100%;
+        width:10vw;
+        float:left;
         
-    }
-    .menuholder{
-        height:10vh;
-        position: relative;
-
     }
 
 
@@ -133,11 +125,15 @@ if(file_exists("editor/phpcache")){
         margin: auto;
         padding-top: 3vh;
 
+    }
+        .menubar li :first-child{
+            padding-top: -5vh;
         }
 
     .menubar li {
         display: inline-block;
         padding-left: 3vw;
+        padding-bottom:3vh;
 
 
     }
@@ -155,24 +151,20 @@ if(file_exists("editor/phpcache")){
     }
 
     .menuclicky {
-        color: white;
+        z-index:9999999;
+        position: absolute;
+        top:3vh;
+        left:1vw;
         width: 100%w;
-        padding-top: 3vh;
+        color: white;
         text-align: center;
         text-decoration: none;
         text-transform: uppercase;
         transition: all 0.2s ease-in;
         cursor:pointer;
+        
+        
     }
-        .menuclicky span{
-            float:left;
-            margin-left:3vw;
-        }
-        .menuclicky p {
-            float:right;
-            margin-right:3vw;
-
-        }
     
         
 
@@ -198,7 +190,7 @@ if(file_exists("editor/phpcache")){
 	$(document).ready(function() {
 		$('#fullpage').fullpage({
 			anchors: ['firstPage', 'secondPage', '3rdPage'],
-			sectionsColor: ['#4A6FB1'],
+			sectionsColor: ['#4A6FB1', '#939FAA', 'red'],
 			scrollingSpeed: 300,
             autoScrolling:false,
             scrollBar: true,
@@ -209,35 +201,35 @@ if(file_exists("editor/phpcache")){
 
 </head>
 <body>
+                <div class='menuclicky'>Menu</div>
+                <div class='menubar'>
+                <ul>
+                <li><a class='button-close'>Close</a></li>
+                <li><a href='#slide1'>Monday</a></li>
+                <li><a href='#slide2'>Tuesday</a></li>
+                <li><a href='#slide3'>Wednesday</a></li>
+                <li><a href='#slide4'>Thursday</a></li>
+                <li><a href='#slide5'>Friday</a></li>
+                    
+                <li><a href='editor/pass.php'>Upload</a></li>
+                </ul>
+                </div>
+
 	<div id="fullpage">
 
 	<div class="section" id="section1">
-        <div class="menuholder">
-        <div class="menubar">
-            <ul>
-                <li><a class="button-close">Close</a></li>
-                <li><a href="#slide1">Monday</a></li>
-                <li><a href="#slide2">Tuesday</a></li>
-                <li><a href="#slide3">Wednesday</a></li>
-                <li><a href="#slide4">Thursday</a></li>
-                <li><a href="#slide5">Friday</a></li>
-                <li><a href="editor/pass.php">Upload</a></li>
-            </ul>
-        </div>
-        <div class="menuclicky">
-            <span>Menu</span> 
-            <p>disclaimer: menu subject to change without prior notice depending on availability</p>                    
-        </div>
-        </div>
-        <div class="intro">
-            
+        
+        <div class="intro">                                
+
 	    			<?php
 			for($day=0;$day<5;$day++){
 				echo "
                 <div class='slide' id='slide".($day+1)."' data-anchor='slide".($day+1)."'>".
 				"\n
                 <h1>".$dayArray[$day]."</h1>
-				<div class='menu crop'>
+
+                
+				<div class='menu'>
 				<table>
 				<tr>
 				<td>Asian</td>
@@ -273,9 +265,12 @@ $('img').error(function(){
 
 $('.section').css("width", "100px");
 
-$('.section').css("width", "100%");
+$('.section').css("width", "100vw");
 };
 $( document ).ready(main);
 
 </script>
 </html>
+<div id="coolP" style="display:none">
+    <p>Biography <br><a href="#" rel="modal:close">Close</a> </p>
+</div>

@@ -12,7 +12,7 @@ var main = function() {
     
   $('.menuclicky').click(function() {
     $('.menuclicky').animate({
-      left: "-100vw"
+      display: "none"
     }, 200);
     
        $('.menubar').animate({
@@ -20,17 +20,18 @@ var main = function() {
     }, 200);
 
     $('body').animate({
-      left: "100vw"
+      left: "10vw"
     }, 200);
   });
 
     
  $('.button-close').click(function () {
     $('.menubar').animate({
-                left: "-100vw"
+        left: "-10vw"
     }, 200);
      $('.menuclicky').animate({
-      left: "0vw"
+      display: "block"
+
     }, 200);
     $('body').animate({
       left: "0vw"
