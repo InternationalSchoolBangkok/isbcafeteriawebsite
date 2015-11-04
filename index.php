@@ -98,7 +98,10 @@ if(file_exists("editor/phpcache")){
 		padding:10px;
 	}
 	table tr td img{
-		width:10vw;
+        width:100px;
+        height:100px;
+
+       object-fit: cover;
 
 	}
         .fp-controlArrow{
