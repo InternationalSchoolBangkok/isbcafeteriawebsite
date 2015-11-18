@@ -1,3 +1,4 @@
+<html>
 <?php
 $foodArray = ["asian","continental","noodle","japanese","veggies","live"];
 $dayArray = ["Monday","Tuesday","Wednesday","Thursday","Friday"];
@@ -8,272 +9,273 @@ if(file_exists("editor/phpcache")){
 }
 ?>
 <head>
-	<title>Caffeteria</title>
-	<!--Load dem Css files-->
-	<link rel="stylesheet" type="text/css" href="jquery.fullPage.css" />
-	<link rel="stylesheet" type="text/css" href="style.css" />
+    <style>
+    
+    
+
+.item {
+    float: left;
+    position: relative;
+    line-height: 1em;
+}
+
+
+.image{
+    max-width: 100%;
+    margin: 0;
+    display: block;
+}
+
+.image:after {
+    clear:both;
+}
+
+.overlay {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-decoration: none;
+    color: #fff;
+    display: none;
+}
+
+
+.overlay .description {
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.80);
+    width: 100%;
+    margin: 0;
+}
+
+
+
+.item:hover .overlay {
+    display: block;
+}
+    
+    </style>
+<link href='https://fonts.googleapis.com/css?family=Roboto:100,400|Indie+Flower' rel='stylesheet' type='text/css'>
+    
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="jquery.min.js"></script>
+    <script src="jquery-ui.js"></script>
+    <script src="js.js"></script>
+    <script src="jquery.min2.js"></script> 
     <script src="jquery.modal.min.js" type="text/javascript" charset="utf-8"></script>
     <link rel="stylesheet" href="jquery.modal.css" type="text/css" media="screen" />
-
-	<!--Temp Css Loader-->
-	<style>
-
-	/* Main Text Styles
-	----------------------------------------*/
-	h1{
-		font-size: 2em;
-		font-family: arial,helvetica;
-		color: #fff;
-		margin:0;
-		margin-top: -50px;
-		padding:30px 0 0 0;
-	}
-
-	.intro p{
-		color: #fff;
-		padding:40px 0 0 0;
-	}
-
-	body{
-		font-family: arial,helvetica;
-		color: #333;
-        height:100%;
-        width:100vw;
-        position: relative;
-	}
-
-	/* Section Styling
-	* --------------------------------------- */
-	.section{
-		text-align:center;
-        position: relative;
-	}
-
-
-	/* Page 1 Navigation
-	* --------------------------------------- */
-	nav ul li{
-		display:inline-block;
-		font-size:2em;
-		padding-left:2vw;
-		padding-right:2vw;
-		padding-top: 5vh;
-	}
-
-	a{
-		color:black;
-	}
-        .slide{
-        padding-top:5vh;
-        width:100vw;
-        position: relative;
-
-        }
-	/* Individual Dates
-	* --------------------------------------- */
-	#slide1{
-		background-color:#7EE081;
-        
-	}
-	#slide2{
-		background-color: aqua;
-        
-	}
-	#slide3{
-		background-color: darkorange;
-	}
-	#slide4{
-		background-color: darkmagenta;
-	}
-	#slide5{
-		background-color: darksalmon;
-	}
-
-	/* Individual Dates
-	* --------------------------------------- */
-	table{
-		margin: 0 auto;
-	}
-	table td{
-		padding:10px;
-	}
-	table tr td img{
-        width:100px;
-        height:100px;
-
-       object-fit: cover;
-
-	}
-        .fp-controlArrow{
-            margin-top:0vh;
-        }
-
-        
-    /*
-        */
-    .menubar {
-        background-color: #484A47;
-        left: -10vw;  
-        position: fixed;
-        height:100%;
-        width:10vw;
-        float:left;
-        
-    }
-
-
-    .menubar ul {
-        list-style: none;
-        position: absolute;
-        margin: auto;
-        padding-top: 3vh;
-
-    }
-        .menubar li :first-child{
-            padding-top: -5vh;
-        }
-
-    .menubar li {
-        display: inline-block;
-        padding-left: 3vw;
-        padding-bottom:3vh;
-
-
-    }
-
-    .menubar a {
-        color: #ECEBF0;
-        font-size: 15px;
-
-    }
-
-    .button-close {
-
-
-        
-    }
-
-    .menuclicky {
-        z-index:9999999;
-        position: absolute;
-        top:3vh;
-        left:1vw;
-        width: 100%w;
-        color: white;
-        text-align: center;
-        text-decoration: none;
-        text-transform: uppercase;
-        transition: all 0.2s ease-in;
-        cursor:pointer;
-        
-        
-    }
-    
-        
-
-
-	</style>
-
-	<!--Javascript/JQuery-->
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
-	<!--Load the plugin-->
-	<!--Fullpage.js-->
-	<script type="text/javascript" src="jquery.slimscroll.min.js"></script>
-	<script type="text/javascript" src="jquery.fullPage.js"></script>
-
-	<!--Modal Stuff-->
-	<script src="jquery.modal.min.js" type="text/javascript" charset="utf-8"></script>
-	<link rel="stylesheet" href="jquery.modal.css" type="text/css" media="screen" />
-
-	<!--Custom JS for later-->
-	<script src="js.js"></script>
-	<!--Settings for scroll plugin-->
-	<script type="text/javascript">
-	$(document).ready(function() {
-		$('#fullpage').fullpage({
-			anchors: ['firstPage', 'secondPage', '3rdPage'],
-			sectionsColor: ['#4A6FB1', '#939FAA', 'red'],
-			scrollingSpeed: 300,
-            autoScrolling:false,
-            scrollBar: true,
-			scrollOverflow: true
-		});
-	});
-	</script>
-
 </head>
+    <style>
+        img{
+            width:100px;
+        }
+    
+    
+    </style>
 <body>
-                <div class='menuclicky'>Menu</div>
-                <div class='menubar'>
-                <ul>
-                <li><a class='button-close'>Close</a></li>
-                <li><a href='#slide1'>Monday</a></li>
-                <li><a href='#slide2'>Tuesday</a></li>
-                <li><a href='#slide3'>Wednesday</a></li>
-                <li><a href='#slide4'>Thursday</a></li>
-                <li><a href='#slide5'>Friday</a></li>
-                    
-                <li><a href='editor/pass.php'>Upload</a></li>
-                </ul>
-                </div>
-
-	<div id="fullpage">
-
-	<div class="section" id="section1">
+    <table>
+        <h1>Monday</h1>
+        <tr>
+            <td>Asian</td>
+            <td>Continental</td>
+            <td>Noodle</td>
+            <td>Japanese</td>
+            <td>Vegetarian/Salads</td>
+            <td>Live</td>
         
-        <div class="intro">                                
+        </tr>
+        <tr>
+            <td>
+                <div class="item">
+						<img src="editor/images/mondayveggies1.jpg" class="image">
+						<a class="overlay">
+							<div class="description">
+								<p>
+									x p y 
+								</p>
+							</div>
+						</a>
+					</div>         
+            </td>
+            <td>
+                <img src="editor/images/tuesdaynoodle1.jpg">            
+            </td>
+            <td>
+                <img src="editor/images/tuesdaynoodle1.jpg">            
+            </td>
+            <td>
+                <img src="editor/images/tuesdaynoodle1.jpg">            
+            </td>
+            <td>
+                <img src="editor/images/tuesdaynoodle1.jpg">            
+            </td>
+            <td>
+                <img src="editor/images/tuesdaynoodle1.jpg">            
+            </td>
+            
+        </tr>
+        <tr>
+            <td>
+                <img src="editor/images/tuesdaynoodle1.jpg">            
+            </td>
+            <td>
+                <img src="editor/images/tuesdaynoodle1.jpg">            
+            </td>
+            <td>
+                <img src="editor/images/tuesdaynoodle1.jpg">            
+            </td>
+            <td>
+                <img src="editor/images/tuesdaynoodle1.jpg">            
+            </td>
+            <td>
+                <img src="editor/images/tuesdaynoodle1.jpg">            
+            </td>
+            <td>
+                <img src="editor/images/tuesdaynoodle1.jpg">            
+            </td>
+            
+        </tr><tr>
+            <td>
+                <img src="editor/images/tuesdaynoodle1.jpg">            
+            </td>
+            <td>
+                <img src="editor/images/tuesdaynoodle1.jpg">            
+            </td>
+            <td>
+                <img src="editor/images/tuesdaynoodle1.jpg">            
+            </td>
+            <td>
+                <img src="editor/images/tuesdaynoodle1.jpg">            
+            </td>
+            <td>
+                <img src="editor/images/tuesdaynoodle1.jpg">            
+            </td>
+            <td>
+                <img src="editor/images/tuesdaynoodle1.jpg">            
+            </td>
+            
+        </tr><tr>
+            <td>
+                <img src="editor/images/tuesdaynoodle1.jpg">            
+            </td>
+            <td>
+                <img src="editor/images/tuesdaynoodle1.jpg">            
+            </td>
+            <td>
+                <img src="editor/images/tuesdaynoodle1.jpg">            
+            </td>
+            <td>
+                <img src="editor/images/tuesdaynoodle1.jpg">            
+            </td>
+            <td>
+                <img src="editor/images/tuesdaynoodle1.jpg">            
+            </td>
+            <td>
+                <img src="editor/images/tuesdaynoodle1.jpg">            
+            </td>
+            
+        </tr><tr>
+            <td>
+                <img src="editor/images/tuesdaynoodle1.jpg">            
+            </td>
+            <td>
+                <img src="editor/images/tuesdaynoodle1.jpg">            
+            </td>
+            <td>
+                <img src="editor/images/tuesdaynoodle1.jpg">            
+            </td>
+            <td>
+                <img src="editor/images/tuesdaynoodle1.jpg">            
+            </td>
+            <td>
+                <img src="editor/images/tuesdaynoodle1.jpg">            
+            </td>
+            <td>
+                <img src="editor/images/tuesdaynoodle1.jpg">            
+            </td>
+            
+        </tr>
 
-	    			<?php
-			for($day=0;$day<5;$day++){
-				echo "
-                <div class='slide' id='slide".($day+1)."' data-anchor='slide".($day+1)."'>".
-				"\n
-                <h1>".$dayArray[$day]."</h1>
+    
+    </table>
+    
+    
+    
 
-                
-				<div class='menu'>
-				<table>
-				<tr>
-				<td>Asian</td>
-				<td>Continental</td>
-				<td>Noodle</td>
-				<td>Japanese</td>
-				<td>Vegetarian/Salads</td>
-				<td>Live Station</td>
-				</tr>";
-				for($row=0;$row<4;$row++){
-					echo "<tr>\n";
-					for($col=0;$col<6;$col++){
-						echo "<td class='tdhover'><img class='imghover' src='editor/images/".$lDayArray[$day].
-						$foodArray[$col].($row+1).".".$cache[$lDayArray[$day].$foodArray[$col].($row+1)]."'>\n";
-					}
-					echo "</tr>\n";
-				}
-				echo "</table>".
-				"\n</div>".
-				"\n</div>";
-			}
-			?>
-        </div>
-	</div>
-	
-</div>
+    
+                    <a href="#food" rel="modal:open"><img src="images/members/ice.png">
+                        <div id="memberContainerText" style="padding-left:20px;">
+                            <h2>Testerone</h2>
+                            <h3>Mac</h3>
+                        </div>
+                    </a>
+    
 </body>
-<script type="text/javascript">
-var main = function (){
-$('img').error(function(){
-        $(this).attr('src', 'images/monday/blankerino.png');
-});
-
-$('.section').css("width", "100px");
-
-$('.section').css("width", "100vw");
-};
-$( document ).ready(main);
-
-</script>
 </html>
-<div id="coolP" style="display:none">
+
+
+
+
+
+<!--!Hidden-->
+<!--Student Council Biographies!-->
+<div >
+    
+
+
+    
+<div id="food" style="display:none">
     <p>Biography <br><a href="#" rel="modal:close">Close</a> </p>
+</div>
+
+
+
+
+
+
+<script>
+
+    
+    
+var konami_keys = [76,65,79,82,78,85,65,76];
+var konami_index = 0;
+$(document).keydown(function(e){
+    if(e.keyCode === konami_keys[konami_index++]){
+        if(konami_index === konami_keys.length){
+            $(document).unbind('keydown', arguments.callee);
+            $.getScript('http://hatterkiller.github.io/scwebsite/cornify-mod.js',function(){
+                cornify_add();
+                $(document).keydown(cornify_add);
+            }); 
+        }
+    }else{
+        konami_index = 0;
+    }
+});
+</script>    
+<br>
+    <br>
+    <br>
+    <br>
+    
+    <br>
+    <br>
+    <br>
+    
+    <br>
+    <br>
+    <br>
+<div id="#foods">Lol</div>
+
+
+
+
+
+
+
 </div>
