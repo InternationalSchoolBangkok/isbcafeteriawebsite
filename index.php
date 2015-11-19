@@ -1,4 +1,3 @@
-<html>
 <?php
 $foodArray = ["asian","continental","noodle","japanese","veggies","live"];
 $dayArray = ["Monday","Tuesday","Wednesday","Thursday","Friday"];
@@ -9,273 +8,392 @@ if(file_exists("editor/phpcache")){
 }
 ?>
 <head>
-    <style>
-    
-    
+	<title>Caffeteria</title>
+	<!--Load dem Css files-->
+	<link rel="stylesheet" type="text/css" href="jquery.fullPage.css" />
+	<link rel="stylesheet" type="text/css" href="style.css" />
+	<script src="jquery.min.js"></script>
+	<script src="jquery-ui.js"></script>
+	<script src="jquery.min2.js"></script>
+	<link rel="stylesheet" href="jquery.modal.css" type="text/css" media="screen" />
 
-.item {
-    float: left;
-    position: relative;
-    line-height: 1em;
-}
+	<!--Temp Css Loader-->
+	<style>
 
+	/* Main Text Styles
+	----------------------------------------*/
+	h1{
+		font-size: 2em;
+		font-family: arial,helvetica;
+		color: #fff;
+		margin:0;
+		margin-top: -50px;
+		padding:30px 0 0 0;
+	}
 
-.image{
-    max-width: 100%;
-    margin: 0;
-    display: block;
-}
+	.intro p{
+		color: #fff;
+		padding:40px 0 0 0;
+	}
 
-.image:after {
-    clear:both;
-}
+	body{
+		font-family: arial,helvetica;
+		color: #333;
+		height:100%;
+		width:100vw;
+		position: relative;
+	}
 
-.overlay {
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0,0,0,0.5);
-    position: absolute;
-    top: 0;
-    left: 0;
-    text-decoration: none;
-    color: #fff;
-    display: none;
-}
-
-
-.overlay .description {
-    text-align: center;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    background-color: rgba(0,0,0,0.80);
-    width: 100%;
-    margin: 0;
-}
-
+	/* Section Styling
+	* --------------------------------------- */
+	.section{
+		text-align:center;
+		position: relative;
+	}
 
 
-.item:hover .overlay {
-    display: block;
-}
-    
-    </style>
-<link href='https://fonts.googleapis.com/css?family=Roboto:100,400|Indie+Flower' rel='stylesheet' type='text/css'>
-    
-	<link rel="stylesheet" type="text/css" href="css/style.css">
-    <script src="jquery.min.js"></script>
-    <script src="jquery-ui.js"></script>
-    <script src="js.js"></script>
-    <script src="jquery.min2.js"></script> 
-    <script src="jquery.modal.min.js" type="text/javascript" charset="utf-8"></script>
-    <link rel="stylesheet" href="jquery.modal.css" type="text/css" media="screen" />
-</head>
-    <style>
-        img{
-            width:100px;
-        }
-    
-    
-    </style>
-<body>
-    <table>
-        <h1>Monday</h1>
-        <tr>
-            <td>Asian</td>
-            <td>Continental</td>
-            <td>Noodle</td>
-            <td>Japanese</td>
-            <td>Vegetarian/Salads</td>
-            <td>Live</td>
-        
-        </tr>
-        <tr>
-            <td>
-                <div class="item">
-						<img src="editor/images/mondayveggies1.jpg" class="image">
-						<a class="overlay">
-							<div class="description">
-								<p>
-									x p y 
-								</p>
-							</div>
-						</a>
-					</div>         
-            </td>
-            <td>
-                <img src="editor/images/tuesdaynoodle1.jpg">            
-            </td>
-            <td>
-                <img src="editor/images/tuesdaynoodle1.jpg">            
-            </td>
-            <td>
-                <img src="editor/images/tuesdaynoodle1.jpg">            
-            </td>
-            <td>
-                <img src="editor/images/tuesdaynoodle1.jpg">            
-            </td>
-            <td>
-                <img src="editor/images/tuesdaynoodle1.jpg">            
-            </td>
-            
-        </tr>
-        <tr>
-            <td>
-                <img src="editor/images/tuesdaynoodle1.jpg">            
-            </td>
-            <td>
-                <img src="editor/images/tuesdaynoodle1.jpg">            
-            </td>
-            <td>
-                <img src="editor/images/tuesdaynoodle1.jpg">            
-            </td>
-            <td>
-                <img src="editor/images/tuesdaynoodle1.jpg">            
-            </td>
-            <td>
-                <img src="editor/images/tuesdaynoodle1.jpg">            
-            </td>
-            <td>
-                <img src="editor/images/tuesdaynoodle1.jpg">            
-            </td>
-            
-        </tr><tr>
-            <td>
-                <img src="editor/images/tuesdaynoodle1.jpg">            
-            </td>
-            <td>
-                <img src="editor/images/tuesdaynoodle1.jpg">            
-            </td>
-            <td>
-                <img src="editor/images/tuesdaynoodle1.jpg">            
-            </td>
-            <td>
-                <img src="editor/images/tuesdaynoodle1.jpg">            
-            </td>
-            <td>
-                <img src="editor/images/tuesdaynoodle1.jpg">            
-            </td>
-            <td>
-                <img src="editor/images/tuesdaynoodle1.jpg">            
-            </td>
-            
-        </tr><tr>
-            <td>
-                <img src="editor/images/tuesdaynoodle1.jpg">            
-            </td>
-            <td>
-                <img src="editor/images/tuesdaynoodle1.jpg">            
-            </td>
-            <td>
-                <img src="editor/images/tuesdaynoodle1.jpg">            
-            </td>
-            <td>
-                <img src="editor/images/tuesdaynoodle1.jpg">            
-            </td>
-            <td>
-                <img src="editor/images/tuesdaynoodle1.jpg">            
-            </td>
-            <td>
-                <img src="editor/images/tuesdaynoodle1.jpg">            
-            </td>
-            
-        </tr><tr>
-            <td>
-                <img src="editor/images/tuesdaynoodle1.jpg">            
-            </td>
-            <td>
-                <img src="editor/images/tuesdaynoodle1.jpg">            
-            </td>
-            <td>
-                <img src="editor/images/tuesdaynoodle1.jpg">            
-            </td>
-            <td>
-                <img src="editor/images/tuesdaynoodle1.jpg">            
-            </td>
-            <td>
-                <img src="editor/images/tuesdaynoodle1.jpg">            
-            </td>
-            <td>
-                <img src="editor/images/tuesdaynoodle1.jpg">            
-            </td>
-            
-        </tr>
+	/* Page 1 Navigation
+	* --------------------------------------- */
+	nav ul li{
+		display:inline-block;
+		font-size:2em;
+		padding-left:2vw;
+		padding-right:2vw;
+		padding-top: 5vh;
+	}
 
-    
-    </table>
-    
-    
-    
+	a{
+		color:black;
+	}
+	.slide{
+		padding-top:5vh;
+		width:100vw;
+		position: relative;
 
-    
-                    <a href="#food" rel="modal:open"><img src="images/members/ice.png">
-                        <div id="memberContainerText" style="padding-left:20px;">
-                            <h2>Testerone</h2>
-                            <h3>Mac</h3>
-                        </div>
-                    </a>
-    
-</body>
-</html>
+	}
+	/* Individual Dates
+	* --------------------------------------- */
+	#slide1{
+		background-color:#7EE081;
+
+	}
+	#slide2{
+		background-color: aqua;
+
+	}
+	#slide3{
+		background-color: darkorange;
+	}
+	#slide4{
+		background-color: darkmagenta;
+	}
+	#slide5{
+		background-color: darksalmon;
+	}
+
+	/* Individual Dates
+	* --------------------------------------- */
+	table{
+		margin: 0 auto;
+	}
+	table td{
+		padding:10px;
+		position: relative;
+	}
+
+	table tr td img{
+		width:100px;
+		height:100px;
+		object-fit: cover;
+
+	}
+	.fp-controlArrow{
+		margin-top:0vh;
+	}
+
+
+	/*
+	*/
+	.menubar {
+		background-color: #484A47;
+		left: -10vw;
+		position: fixed;
+		height:100%;
+		width:10vw;
+		float:left;
+
+	}
+
+
+	.menubar ul {
+		list-style: none;
+		position: absolute;
+		margin: auto;
+		padding-top: 3vh;
+
+	}
+	.menubar li :first-child{
+		padding-top: -5vh;
+	}
+
+	.menubar li {
+		display: inline-block;
+		padding-left: 3vw;
+		padding-bottom:3vh;
+
+
+	}
+
+	.menubar a {
+		color: #ECEBF0;
+		font-size: 15px;
+
+	}
+
+	.button-close {
 
 
 
+	}
+
+	.menuclicky {
+		z-index:9999999;
+		position: absolute;
+		top:3vh;
+		left:1vw;
+		width: 100%w;
+		color: white;
+		text-align: center;
+		text-decoration: none;
+		text-transform: uppercase;
+		transition: all 0.2s ease-in;
+		cursor:pointer;
+	}
+
+	/*Modal Stuff
+	-----------------------------------*/
+	#overlay {
+		position:fixed;
+		top:0;
+		left:0;
+		width:100%;
+		height:100%;
+		background:#000;
+		opacity:0.5;
+		filter:alpha(opacity=50);
+		z-index: 100;
+	}
+
+	#modal {
+		position:absolute;
+		background:url(tint20.png) 0 0 repeat;
+		background:rgba(0,0,0,0.2);
+		border-radius:14px;
+		padding:8px;
+		z-index: 101;
+	}
+
+	#content {
+		border-radius:8px;
+		background:#fff;
+		padding:20px;
+	}
+
+	#close {
+		position:absolute;
+		background:url("/resources/icons/close.png") 0 0 no-repeat;
+		width:24px;
+		height:27px;
+		display:block;
+		text-indent:-9999px;
+		top:-7px;
+		right:-7px;
+	}
+	</style>
 
 
-<!--!Hidden-->
-<!--Student Council Biographies!-->
-<div >
-    
+	<!--Javascript/JQuery-->
+	<!--Load the plugin-->
+	<!--Fullpage.js-->
+	<script type="text/javascript" src="jquery.slimscroll.min.js"></script>
+	<script type="text/javascript" src="jquery.fullPage.js"></script>
 
+	<!--Modal Stuff-->
 
-    
-<div id="food" style="display:none">
-    <p>Biography <br><a href="#" rel="modal:close">Close</a> </p>
-</div>
+	<!--Custom JS for later-->
+	<script src="js.js"></script>
+	<!--Settings for scroll plugin-->
+	<script type="text/javascript">
+	$(document).ready(function() {
+		$('#fullpage').fullpage({
+			anchors: ['firstPage', 'secondPage', '3rdPage'],
+			sectionsColor: ['#4A6FB1', '#939FAA', 'red'],
+			scrollingSpeed: 300,
+			autoScrolling:false,
+			scrollBar: true,
+			scrollOverflow: true
+		});
+	});
+	</script>
+	<script>
+	var modal = (function(){
+		var
+		method = {},
+		$overlay,
+		$modal,
+		$content,
+		$close;
 
+		// Center the modal in the viewport
+		method.center = function () {
+			var top, left;
 
+			top = Math.max($(window).height() - $modal.outerHeight(), 0) / 2;
+			left = Math.max($(window).width() - $modal.outerWidth(), 0) / 2;
 
+			$modal.css({
+				top:top + $(window).scrollTop(),
+				left:left + $(window).scrollLeft()
+			});
+		};
 
+		// Open the modal
+		method.open = function (settings) {
+			$content.empty().append(settings.content);
 
+			$modal.css({
+				width: settings.width || 'auto',
+				height: settings.height || 'auto'
+			});
 
-<script>
+			method.center();
+			$(window).bind('resize.modal', method.center);
+			$modal.show();
+			$overlay.show();
+		};
 
-    
-    
-var konami_keys = [76,65,79,82,78,85,65,76];
-var konami_index = 0;
-$(document).keydown(function(e){
-    if(e.keyCode === konami_keys[konami_index++]){
-        if(konami_index === konami_keys.length){
-            $(document).unbind('keydown', arguments.callee);
-            $.getScript('http://hatterkiller.github.io/scwebsite/cornify-mod.js',function(){
-                cornify_add();
-                $(document).keydown(cornify_add);
-            }); 
-        }
-    }else{
-        konami_index = 0;
-    }
+		// Close the modal
+		method.close = function () {
+			$modal.hide();
+			$overlay.hide();
+			$content.empty();
+			$(window).unbind('resize.modal');
+		};
+
+		// Generate the HTML and add it to the document
+		$overlay = $('<div id="overlay"></div>');
+		$modal = $('<div id="modal"></div>');
+		$content = $('<div id="content"></div>');
+		$close = $('<a id="close" href="#">close</a>');
+
+		$modal.hide();
+		$overlay.hide();
+		$modal.append($content, $close);
+
+		$(document).ready(function(){
+			$('body').append($overlay, $modal);
+		});
+
+		$close.click(function(e){
+			e.preventDefault();
+			method.close();
+		});
+
+		return method;
+	}());
+
+	// Wait until the DOM has loaded before querying the document
+	$(document).ready(function(){
+		/*$.get('ajax.html', function(data){
+		modal.open({content: data});
+	});*/
+	$('a.imgholder').click(function(event){
+		var id = event.target.id;
+		var allDescriptions = {
+			<?php
+			//this php method prints out all of the descriptions that have been entered by the admin
+			echo "mondayasian1:'This is a sample description yummy asian',mondaycontinental1:'WAO continental',mondaynoodle1:'MMM noodres much tasty'";
+			?>
+		};
+		modal.open({content: allDescriptions[id]});
+		event.preventDefault();
+	});
 });
-</script>    
-<br>
-    <br>
-    <br>
-    <br>
-    
-    <br>
-    <br>
-    <br>
-    
-    <br>
-    <br>
-    <br>
-<div id="#foods">Lol</div>
+</script>
+
+</head>
+<body>
+	<div class='menuclicky'>Menu</div>
+	<div class='menubar'>
+		<ul>
+			<li><a class='button-close'>Close</a></li>
+			<li><a href='#slide1'>Monday</a></li>
+			<li><a href='#slide2'>Tuesday</a></li>
+			<li><a href='#slide3'>Wednesday</a></li>
+			<li><a href='#slide4'>Thursday</a></li>
+			<li><a href='#slide5'>Friday</a></li>
+
+			<li><a href='editor/pass.php'>Upload</a></li>
+		</ul>
+	</div>
+
+	<div id="fullpage">
+		<div id="nicP" style="display:none; z-index: 100000;">
+			<p>Biography <br><a href="#" rel="modal:close">Close</a> </p>
+		</div>
 
 
+		<div class="section" id="section1">
+			<div class="intro">
+				<?php
+				for($day=0;$day<5;$day++){
+					echo "
+					<div class='slide' id='slide".($day+1)."' data-anchor='slide".($day+1)."'>".
+					"\n
+					<h1>".$dayArray[$day]."</h1>
+					<div class='menu'>
+					<table>
+					<tr>
+					<td>Asian</td>
+					<td>Continental</td>
+					<td>Noodle</td>
+					<td>Japanese</td>
+					<td>Vegetarian/Salads</td>
+					<td>Live Station</td>
+					</tr>";
+					for($row=0;$row<4;$row++){
+						echo "<tr>\n";
+						for($col=0;$col<6;$col++){
+							$img = $lDayArray[$day].$foodArray[$col].($row+1);
+							$extension = ".".$cache[$lDayArray[$day].$foodArray[$col].($row+1)];
+							echo "<td class='tdhover'><a class='imgholder' href='#'><img id='".
+							$img."'src='editor/images/".$img.$extension."'></a></td>";
+						}
+						echo "</tr>\n";
+					}
+					echo "</table>".
+					"\n</div>".
+					"\n</div>";
+				}
+				?>
+			</div>
+		</div>
 
+	</div>
+</body>
+<script src="jquery.modal.min.js" type="text/javascript" charset="utf-8"></script>
 
+<script type="text/javascript">
+var main = function (){
+	$('img').error(function(){
+		$(this).attr('src', 'images/monday/blankerino.png');
+	});
 
+	$('.section').css("width", "100px");
 
+	$('.section').css("width", "100vw");
+};
+$( document ).ready(main);
 
-</div>
+</script>
+</html>
