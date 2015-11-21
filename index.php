@@ -186,11 +186,12 @@ if(file_exists("editor/phpcache")){
 
 	#modal {
 		position:absolute;
-		background:url(tint20.png) 0 0 repeat;
+		/*background:url(tint20.png) 0 0 repeat;*/
 		background:rgba(0,0,0,0.2);
 		border-radius:14px;
 		padding:8px;
 		z-index: 101;
+		max-width: 50vw;
 	}
 
 	#content {
@@ -208,6 +209,10 @@ if(file_exists("editor/phpcache")){
 		text-indent:-9999px;
 		top:-7px;
 		right:-7px;
+	}
+	img.modal-img{
+		max-width: 100%;
+		max-height: 70vh;
 	}
 	</style>
 
@@ -312,11 +317,28 @@ if(file_exists("editor/phpcache")){
 		var allDescriptions = {
 			<?php
 			//this php method prints out all of the descriptions that have been entered by the admin
-			echo "mondayasian1:'This is a sample description yummy asian',mondaycontinental1:'WAO continental',mondaynoodle1:'MMM noodres much tasty'";
+			echo "dummy:'NA'";
+			foreach($cache["descriptions"] as $key => $value){
+				$value = addslashes ($value);
+				echo ",".$key.":'".$value."'";
+			}
 			?>
 		};
-		modal.open({content: allDescriptions[id]});
+		var img = event.target.src;
+		var description = allDescriptions[id];
+		if(!description){
+			description = "";
+		}
+		var content = "<img class='modal-img' src='"+img+"'/><br>"+description;
+		if(img.indexOf("/editor/images/blank.png") == -1||description!=""){
+			modal.open({content: content});
+		}
 		event.preventDefault();
+	});
+	$(document).keyup(function(e) {
+		if (e.keyCode == 27){
+			modal.close();
+		}
 	});
 });
 </script>
@@ -365,7 +387,7 @@ if(file_exists("editor/phpcache")){
 						echo "<tr>\n";
 						for($col=0;$col<6;$col++){
 							$img = $lDayArray[$day].$foodArray[$col].($row+1);
-							$extension = ".".$cache[$lDayArray[$day].$foodArray[$col].($row+1)];
+							$extension = ".".$cache[$img];
 							echo "<td class='tdhover'><a class='imgholder' href='#'><img id='".
 							$img."'src='editor/images/".$img.$extension."'></a></td>";
 						}
@@ -386,7 +408,7 @@ if(file_exists("editor/phpcache")){
 <script type="text/javascript">
 var main = function (){
 	$('img').error(function(){
-		$(this).attr('src', 'images/monday/blankerino.png');
+		$(this).attr('src', '/editor/images/blank.png');
 	});
 
 	$('.section').css("width", "100px");

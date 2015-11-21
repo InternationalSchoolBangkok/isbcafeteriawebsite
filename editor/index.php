@@ -32,15 +32,21 @@ if(file_exists("phpcache")){
 		for($row=0;$row<4;$row++){
 			echo "<tr>\n";
 			for($col=0;$col<6;$col++){
-				echo "<td class='tdhover'><img class='imghover' src='images/".$lDayArray[$day].
-				$foodArray[$col].($row+1).".".$cache[$lDayArray[$day].$foodArray[$col].($row+1)]."'>".
+				$img = $lDayArray[$day].$foodArray[$col].($row+1);
+				echo "<td class='tdhover'><img class='imghover' src='images/".$img.".".
+				$cache[$img]."'>".
 				"\n<form action='upload.php' method='post' enctype='multipart/form-data'>".
-				"\n<input type='file' name='".$lDayArray[$day].$foodArray[$col].($row+1)."'>".
-				"\n<input type='submit'>".
+				"\n<input type='file' name='".$img."'>".
+				"\n<input value='Submit Image' type='submit'>".
 				"\n</form>".
-        /*Delete Form*/
+        /*Delete Picture Form*/
         "\n<form action='delete.php' method='post'>".
-				"\n<input type='submit' name='".$lDayArray[$day].$foodArray[$col].($row+1)."' value='Delete'/>".
+				"\n<input type='submit' name='".$img."' value='Delete Image'/>".
+				"\n</form>".
+				/*Description Form*/
+				"\n<form action='upload.php' method='post'>".
+				"\n<textarea cols='20' rows ='3' name='".$img."'>".$cache["descriptions"][$img]."</textarea><br>".
+				"\n<input value='Submit Description' type='submit'>".
 				"\n</form>".
 				"\n</td>";
 			}
