@@ -7,6 +7,14 @@ if(file_exists("editor/phpcache")){
 	$cache = unserialize(file_get_contents("editor/phpcache"));//array associating filename to extension
 }
 ?>
+
+<!--Redirect if user has no Javascript-->
+<noscript>
+  <META HTTP-EQUIV="Refresh" CONTENT="0;URL=error.html">
+</noscript>
+
+</noscript>
+
 <head>
 	<title>Caffeteria</title>
 	<!--Load dem Css files-->
@@ -95,15 +103,17 @@ if(file_exists("editor/phpcache")){
 	* --------------------------------------- */
 	table{
 		margin: 0 auto;
+        width:72vw;
 	}
 	table td{
-		padding:10px;
+        width: 12vw;
+        height:auto;
+        padding-left: 1vw;
 		position: relative;
 	}
 
 	table tr td img{
-		width:100px;
-		height:100px;
+		width:10vw;
 		object-fit: cover;
 
 	}
@@ -355,7 +365,7 @@ if(file_exists("editor/phpcache")){
 			<li><a href='#slide4'>Thursday</a></li>
 			<li><a href='#slide5'>Friday</a></li>
 
-			<li><a href='editor/pass.php'>Upload</a></li>
+			<li><a href='editor/'>Upload</a></li>
 		</ul>
 	</div>
 
@@ -414,6 +424,7 @@ var main = function (){
 	$('.section').css("width", "100px");
 
 	$('.section').css("width", "100vw");
+    $('img').height($('img').width());
 };
 $( document ).ready(main);
 
