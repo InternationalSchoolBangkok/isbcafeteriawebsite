@@ -10,8 +10,8 @@ if(file_exists("editor/phpcache")){
 
 <!--Redirect if user has no Javascript-->
 <noscript>
-  <META HTTP-EQUIV="Refresh" CONTENT="0;URL=error.html">
-</noscript>
+	<META HTTP-EQUIV="Refresh" CONTENT="0;URL=error.html">
+	</noscript>
 
 </noscript>
 
@@ -20,11 +20,7 @@ if(file_exists("editor/phpcache")){
 	<!--Load dem Css files-->
 	<link rel="stylesheet" type="text/css" href="jquery.fullPage.css" />
 	<link rel="stylesheet" type="text/css" href="style.css" />
-	<script src="jquery.min.js"></script>
-	<script src="jquery-ui.js"></script>
 	<script src="jquery.min2.js"></script>
-	<link rel="stylesheet" href="jquery.modal.css" type="text/css" media="screen" />
-
 	<!--Temp Css Loader-->
 	<style>
 
@@ -103,19 +99,19 @@ if(file_exists("editor/phpcache")){
 	* --------------------------------------- */
 	table{
 		margin: 0 auto;
-        width:72vw;
+		width:72vw;
 	}
 	table td{
-        width: 12vw;
-        height:auto;
-        padding-left: 1vw;
+		width: 12vw;
+		height:auto;
+		padding-left: 1vw;
 		position: relative;
 	}
 
 	table tr td img{
 		width:10vw;
 		object-fit: cover;
-
+		margin:0.5vh;
 	}
 	.fp-controlArrow{
 		margin-top:0vh;
@@ -161,9 +157,6 @@ if(file_exists("editor/phpcache")){
 	}
 
 	.button-close {
-
-
-
 	}
 
 	.menuclicky {
@@ -230,9 +223,7 @@ if(file_exists("editor/phpcache")){
 	<!--Javascript/JQuery-->
 	<!--Load the plugin-->
 	<!--Fullpage.js-->
-	<script type="text/javascript" src="jquery.slimscroll.min.js"></script>
 	<script type="text/javascript" src="jquery.fullPage.js"></script>
-
 	<!--Modal Stuff-->
 
 	<!--Custom JS for later-->
@@ -397,7 +388,12 @@ if(file_exists("editor/phpcache")){
 						echo "<tr>\n";
 						for($col=0;$col<6;$col++){
 							$img = $lDayArray[$day].$foodArray[$col].($row+1);
-							$extension = ".".$cache[$img];
+							if($cache[$img]!=""){
+								$extension = ".".$cache[$img];
+							}else{
+								$img =  "blank";
+								$extension = ".png";
+							}
 							echo "<td class='tdhover'><a class='imgholder' href='#'><img id='".
 							$img."'src='editor/images/".$img.$extension."'></a></td>";
 						}
@@ -413,18 +409,12 @@ if(file_exists("editor/phpcache")){
 
 	</div>
 </body>
-<script src="jquery.modal.min.js" type="text/javascript" charset="utf-8"></script>
-
 <script type="text/javascript">
 var main = function (){
-	$('img').error(function(){
-		$(this).attr('src', '/editor/images/blank.png');
-	});
-
 	$('.section').css("width", "100px");
 
 	$('.section').css("width", "100vw");
-    $('img').height($('img').width());
+	$('img').height($('img').width());
 };
 $( document ).ready(main);
 
