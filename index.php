@@ -6,8 +6,8 @@ $cache = array();
 if(file_exists("editor/phpcache")){
 	$cache = unserialize(file_get_contents("editor/phpcache"));//array associating filename to extension
 }
+$displayWeek = $cache["current-week"];
 ?>
-
 <!--Redirect if user has no Javascript-->
 <noscript>
 	<META HTTP-EQUIV="Refresh" CONTENT="0;URL=error.html">
@@ -387,7 +387,7 @@ if(file_exists("editor/phpcache")){
 					for($row=0;$row<4;$row++){
 						echo "<tr>\n";
 						for($col=0;$col<6;$col++){
-							$img = $lDayArray[$day].$foodArray[$col].($row+1);
+							$img = "week".$displayWeek.$lDayArray[$day].$foodArray[$col].($row+1);
 							if($cache[$img]!=""){
 								$extension = ".".$cache[$img];
 							}else{

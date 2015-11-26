@@ -39,7 +39,7 @@ if(getallheaders()["Content-Type"]!="application/x-www-form-urlencoded"){
 	}
 }else{
 	foreach ($_POST as $key => $value){
-		if($key){
+		if($key && $key!="blank"){//blank thing stops blank-named images from being named
 			$cache["descriptions"][$key] = $value;
 			$uploadOk = 1;
 			break;
@@ -60,7 +60,8 @@ if ($uploadOk == 0) {
 	}
 }
 if($uploadOk != 0){
-	header("Location: index.php");
+	$referer = getallheaders()["Referer"];
+	header("Location: ".$referer);
 	file_put_contents("phpcache",serialize($cache));
 	exit();
 }else{

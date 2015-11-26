@@ -13,5 +13,6 @@ foreach($_POST as $key => $file){
     break;
 }
 file_put_contents("phpcache",serialize($cache));
-header("Location: index.php");
+$referer = getallheaders()["Referer"];
+header("Location: ".$referer);
 ?>
