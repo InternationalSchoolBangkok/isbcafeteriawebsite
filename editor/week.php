@@ -1,3 +1,5 @@
+	<script src="jquery.min2.js"></script>
+
 <?php if($_COOKIE["magic_word"]=="softdev1234"): ?>
 <?php
 $week = $_GET["week"];//This is the week to EDIT not the week to display
@@ -74,3 +76,38 @@ echo "<a>This page will edit week ".$week."</a><br><a href=/editor/index.php>Cli
 <?php else: ?>
 	<?php header("Location: pass.php"); ?>
 <?php endif ?>
+<script>
+
+;(function($){
+  
+    /**
+     * Store scroll position for and set it after reload
+     *
+     * @return {boolean} [loacalStorage is available]
+     */
+    $.fn.scrollPosReaload = function(){
+        if (localStorage) {
+            var posReader = localStorage["posStorage"];
+            if (posReader) {
+                $(window).scrollTop(posReader);
+                localStorage.removeItem("posStorage");
+            }
+            $(this).click(function(e) {
+                localStorage["posStorage"] = $(window).scrollTop();
+            });
+
+            return true;
+        }
+
+        return false;
+    }
+    
+    /* ================================================== */
+
+    $(document).ready(function() {
+        // Feel free to set it for any element who trigger the reload
+        $('select').scrollPosReaload();
+    });
+  
+}(jQuery));  
+</script>
