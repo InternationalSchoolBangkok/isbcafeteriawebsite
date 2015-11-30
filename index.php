@@ -38,9 +38,6 @@ $displayWeek = $cache["current-week"];
         
         
         /*Comment this out to remove grey menu*/
-        width:100vw;
-        height:15vh;
-        background-color: #ADADAD;
 	}
 
 	.intro p{
