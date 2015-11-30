@@ -17,10 +17,10 @@ $displayWeek = $cache["current-week"];
 
 <head>
 	<title>Caffeteria</title>
-	<!--Load dem Css files-->
+	<!--Load Css files-->
 	<link rel="stylesheet" type="text/css" href="jquery.fullPage.css" />
 	<link rel="stylesheet" type="text/css" href="style.css" />
-    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
 	<script src="jquery.min2.js"></script>
 	<!--Temp Css Loader-->
 	<style>
@@ -30,15 +30,11 @@ $displayWeek = $cache["current-week"];
 	h1{
 		font-size: 3em;
 		font-family:'Kaushan Script';
-        font-style: italic;
+		font-style: italic;
 		color: #fff;
 		margin:0;
-		margin-top: -50px;
 		padding:30px 0 0 0;
-        
-        
-        /*Comment this out to remove grey menu*/
-	}
+}
 
 	.intro p{
 		color: #fff;
@@ -51,7 +47,7 @@ $displayWeek = $cache["current-week"];
 		height:100%;
 		width:100vw;
 		position: relative;
-        -webkit-text-size-adjust: auto;
+		-webkit-text-size-adjust: auto;
 	}
 
 	/* Section Styling
@@ -105,7 +101,7 @@ $displayWeek = $cache["current-week"];
 	* --------------------------------------- */
 	table{
 		margin: 0 auto;
-        margin-top:5vh;
+		margin-top:5vh;
 		width:80vw;
 	}
 
@@ -113,31 +109,31 @@ $displayWeek = $cache["current-week"];
 		width: 12vw;
 		height:auto;
 		position: relative;
-        margin: 0;
-        font-size: 20px;
+		margin: 0;
+		font-size: 20px;
 	}
-        
-    table tr{
-        text-align: center;        
-    }
-    
-    table tr:first-child td{
-        border-style: none;
-        border-bottom: 1px solid black;
-        margin-bottom: 2vh;
+
+	table tr{
+		text-align: center;
+	}
+
+	table tr:first-child td{
+		border-style: none;
+		border-bottom: 1px solid black;
+		margin-bottom: 2vh;
 
 
-    }
-    table tr{
-        margin-bottom: 10vh;    
-    }
+	}
+	table tr{
+		margin-bottom: 10vh;
+	}
 
 	table tr td img{
 		width:12vw;
 		object-fit: cover;
-        line-height: 0;
-        
-
+		line-height: 0;
+		margin: 0.5vw;
+		border-radius: 1vw;
 	}
 	.fp-controlArrow{
 		margin-top:0vh;
@@ -310,7 +306,7 @@ $displayWeek = $cache["current-week"];
 			$overlay.hide();
 			$content.empty();
 			$(window).unbind('resize.modal');
-            
+
 		};
 
 		// Generate the HTML and add it to the document
@@ -331,7 +327,7 @@ $displayWeek = $cache["current-week"];
 			e.preventDefault();
 			method.close();
 		});
-        $close.click(function(e){
+		$close.click(function(e){
 			e.preventDefault();
 			method.close();
 		});
@@ -412,7 +408,7 @@ $displayWeek = $cache["current-week"];
 					<td>Continental</td>
 					<td>Noodle</td>
 					<td>Japanese</td>
-					<td>Vegetarian/Salads</td>
+					<td>Vegetarian/ Salads</td>
 					<td>Live Station</td>
 					</tr>";
 					for($row=0;$row<4;$row++){
