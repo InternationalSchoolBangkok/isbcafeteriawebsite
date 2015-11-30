@@ -20,6 +20,7 @@ $displayWeek = $cache["current-week"];
 	<!--Load dem Css files-->
 	<link rel="stylesheet" type="text/css" href="jquery.fullPage.css" />
 	<link rel="stylesheet" type="text/css" href="style.css" />
+    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
 	<script src="jquery.min2.js"></script>
 	<!--Temp Css Loader-->
 	<style>
@@ -27,12 +28,19 @@ $displayWeek = $cache["current-week"];
 	/* Main Text Styles
 	----------------------------------------*/
 	h1{
-		font-size: 2em;
-		font-family: arial,helvetica;
+		font-size: 3em;
+		font-family:'Kaushan Script';
+        font-style: italic;
 		color: #fff;
 		margin:0;
 		margin-top: -50px;
 		padding:30px 0 0 0;
+        
+        
+        /*Comment this out to remove grey menu*/
+        width:100vw;
+        height:15vh;
+        background-color: #ADADAD;
 	}
 
 	.intro p{
@@ -41,11 +49,12 @@ $displayWeek = $cache["current-week"];
 	}
 
 	body{
-		font-family: arial,helvetica;
+		font-family: helvetica;
 		color: #333;
 		height:100%;
 		width:100vw;
 		position: relative;
+        -webkit-text-size-adjust: auto;
 	}
 
 	/* Section Styling
@@ -82,36 +91,56 @@ $displayWeek = $cache["current-week"];
 
 	}
 	#slide2{
-		background-color: aqua;
+		background-color: #C6D8FF;
 
 	}
 	#slide3{
-		background-color: darkorange;
+		background-color: #8789C0;
 	}
 	#slide4{
-		background-color: darkmagenta;
+		background-color: #DDD8C4;
 	}
 	#slide5{
-		background-color: darksalmon;
+		background-color: #FFA630;
 	}
 
 	/* Individual Dates
 	* --------------------------------------- */
 	table{
 		margin: 0 auto;
-		width:72vw;
+        margin-top:5vh;
+		width:80vw;
 	}
+
 	table td{
 		width: 12vw;
 		height:auto;
-		padding-left: 1vw;
 		position: relative;
+        margin: 0;
+        font-size: 20px;
 	}
+        
+    table tr{
+        text-align: center;        
+    }
+    
+    table tr:first-child td{
+        border-style: none;
+        border-bottom: 1px solid black;
+        margin-bottom: 2vh;
+
+
+    }
+    table tr{
+        margin-bottom: 10vh;    
+    }
 
 	table tr td img{
-		width:10vw;
+		width:12vw;
 		object-fit: cover;
-		margin:0.5vh;
+        line-height: 0;
+        
+
 	}
 	.fp-controlArrow{
 		margin-top:0vh;
@@ -284,6 +313,7 @@ $displayWeek = $cache["current-week"];
 			$overlay.hide();
 			$content.empty();
 			$(window).unbind('resize.modal');
+            
 		};
 
 		// Generate the HTML and add it to the document
@@ -300,7 +330,11 @@ $displayWeek = $cache["current-week"];
 			$('body').append($overlay, $modal);
 		});
 
-		$close.click(function(e){
+		$overlay.click(function(e){
+			e.preventDefault();
+			method.close();
+		});
+        $close.click(function(e){
 			e.preventDefault();
 			method.close();
 		});
