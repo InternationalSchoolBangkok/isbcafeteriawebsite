@@ -106,7 +106,7 @@ $displayWeek = $cache["current-week"];
 	}
 
 	table td{
-		width: 12vw;
+		width: 11vw;
 		height:auto;
 		position: relative;
 		margin: 0;
@@ -129,7 +129,7 @@ $displayWeek = $cache["current-week"];
 	}
 
 	table tr td img{
-		width:12vw;
+		width:11vw;
 		object-fit: cover;
 		line-height: 0;
 		margin: 0.5vw;
@@ -193,6 +193,16 @@ $displayWeek = $cache["current-week"];
 		text-transform: uppercase;
 		transition: all 0.2s ease-in;
 		cursor:pointer;
+	}
+    .disc {
+		z-index:9999999;
+		position: absolute;
+		top:3vh;
+		right:1vw;
+		color: white;
+		text-align: center;
+		text-decoration: none;
+		text-transform: uppercase;
 	}
 
 	/*Modal Stuff
@@ -373,7 +383,12 @@ $displayWeek = $cache["current-week"];
 
 </head>
 <body>
-	<div class='menuclicky'>Menu</div>
+	<div class='menuclicky'>Menu
+    
+    
+    </div>
+    <div class="disc">disclaimer “menu subject to change without prior notice depending on availability”
+</div>
 	<div class='menubar'>
 		<ul>
 			<li><a class='button-close'>Close</a></li>
