@@ -16,7 +16,7 @@ $displayWeek = $cache["current-week"];
 </noscript>
 
 <head>
-	<title>Caffeteria</title>
+	<title>Cafeteria</title>
 	<!--Load Css files-->
 	<link rel="stylesheet" type="text/css" href="jquery.fullPage.css" />
 	<link rel="stylesheet" type="text/css" href="style.css" />
@@ -28,16 +28,16 @@ $displayWeek = $cache["current-week"];
 	/* Main Text Styles
 	----------------------------------------*/
 	.titlelarge{
-        position: absolute;
+		position: absolute;
 		font-size: 3em;
 		font-family:'Kaushan Script';
 		font-style: italic;
 		color: #fff;
-        left:0;
-        right:0;
-        top:3%;
+		left:0;
+		right:0;
+		top:3%;
 		padding:30px 0 0 0;
-}
+	}
 
 	.intro p{
 		color: #fff;
@@ -105,7 +105,7 @@ $displayWeek = $cache["current-week"];
 	table{
 		margin: 0 auto;
 		width:80vw;
-        margin-top: 3%;
+		margin-top: 3%;
 	}
 
 	table td{
@@ -182,7 +182,7 @@ $displayWeek = $cache["current-week"];
 	}
 
 	.button-close {
-        font-style: oblique;
+		font-style: oblique;
 	}
 
 	.menuclicky {
@@ -198,7 +198,7 @@ $displayWeek = $cache["current-week"];
 		transition: all 0.2s ease-in;
 		cursor:pointer;
 	}
-    .disc {
+	.disc {
 		z-index:9999999;
 		position: absolute;
 		top:3vh;
@@ -206,7 +206,7 @@ $displayWeek = $cache["current-week"];
 		color: white;
 		text-align: center;
 		text-decoration: none;
-		text-transform: uppercase;
+		/*text-transform: uppercase;*/
 	}
 
 	/*Modal Stuff
@@ -231,7 +231,7 @@ $displayWeek = $cache["current-week"];
 		padding:8px;
 		z-index: 101;
 		max-width: 50vw;
-        margin-top: -10vh;
+		margin-top: -10vh;
 	}
 
 	#content {
@@ -239,11 +239,11 @@ $displayWeek = $cache["current-week"];
 		background:#fff;
 		padding:20px;
 	}
-    
-        
-    #modal img {
-        border-radius: 8px;    
-    }
+
+
+	#modal img {
+		border-radius: 8px;
+	}
 
 	#close {
 		position:absolute;
@@ -394,11 +394,10 @@ $displayWeek = $cache["current-week"];
 </head>
 <body>
 	<div class='menuclicky'>Menu
-    
-    
-    </div>
-    <div class="disc">disclaimer “menu subject to change without prior notice depending on availability”
-</div>
+	</div>
+	<div class="disc">Disclaimer: menu subject to change without prior notice depending on availability<br>
+	Notice: All allergy information for dishes is available at food booths</div>
+
 	<div class='menubar'>
 		<ul>
 			<li><a class='button-close'>Close</a></li>
