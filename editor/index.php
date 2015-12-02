@@ -32,6 +32,8 @@
     </select>
     <INPUT TYPE="submit" name="submit" />
 </form>
+      
+      <a href="../">Return Home</a>
   </body>
   </html>
 <?php else: ?>

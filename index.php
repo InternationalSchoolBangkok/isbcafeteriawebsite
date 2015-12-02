@@ -27,12 +27,15 @@ $displayWeek = $cache["current-week"];
 
 	/* Main Text Styles
 	----------------------------------------*/
-	h1{
+	.titlelarge{
+        position: absolute;
 		font-size: 3em;
 		font-family:'Kaushan Script';
 		font-style: italic;
 		color: #fff;
-		margin:0;
+        left:0;
+        right:0;
+        top:3%;
 		padding:30px 0 0 0;
 }
 
@@ -44,7 +47,7 @@ $displayWeek = $cache["current-week"];
 	body{
 		font-family: helvetica;
 		color: #333;
-		height:100%;
+		height:120%;
 		width:100vw;
 		position: relative;
 		-webkit-text-size-adjust: auto;
@@ -101,8 +104,8 @@ $displayWeek = $cache["current-week"];
 	* --------------------------------------- */
 	table{
 		margin: 0 auto;
-		margin-top:5vh;
 		width:80vw;
+        margin-top: 3%;
 	}
 
 	table td{
@@ -179,6 +182,7 @@ $displayWeek = $cache["current-week"];
 	}
 
 	.button-close {
+        font-style: oblique;
 	}
 
 	.menuclicky {
@@ -220,13 +224,14 @@ $displayWeek = $cache["current-week"];
 	}
 
 	#modal {
-		position:absolute;
+		position:fixed;
 		/*background:url(tint20.png) 0 0 repeat;*/
 		background:rgba(0,0,0,0.2);
 		border-radius:14px;
 		padding:8px;
 		z-index: 101;
 		max-width: 50vw;
+        margin-top: -10vh;
 	}
 
 	#content {
@@ -234,6 +239,11 @@ $displayWeek = $cache["current-week"];
 		background:#fff;
 		padding:20px;
 	}
+    
+        
+    #modal img {
+        border-radius: 8px;    
+    }
 
 	#close {
 		position:absolute;
@@ -266,7 +276,7 @@ $displayWeek = $cache["current-week"];
 		$('#fullpage').fullpage({
 			anchors: ['firstPage', 'secondPage', '3rdPage'],
 			sectionsColor: ['#4A6FB1', '#939FAA', 'red'],
-			scrollingSpeed: 300,
+			scrollingSpeed: 400,
 			autoScrolling:false,
 			scrollBar: true,
 			scrollOverflow: true
@@ -367,7 +377,7 @@ $displayWeek = $cache["current-week"];
 		if(!description){
 			description = "";
 		}
-		var content = "<img class='modal-img' src='"+img+"'/><br>"+description;
+		var content = "<img class='modal-img' src='"+img+"'/><br><br>"+description;
 		if(img.indexOf("/editor/images/blank.png") == -1||description!=""){
 			modal.open({content: content});
 		}
@@ -415,7 +425,7 @@ $displayWeek = $cache["current-week"];
 					echo "
 					<div class='slide' id='slide".($day+1)."' data-anchor='slide".($day+1)."'>".
 					"\n
-					<h1>".$dayArray[$day]."</h1>
+					<h1 class='titlelarge'>".$dayArray[$day]."</h1>
 					<div class='menu'>
 					<table>
 					<tr>
