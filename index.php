@@ -25,18 +25,29 @@ $displayWeek = $cache["current-week"];
 	<script src="jquery.min2.js"></script>
 	<!--Temp Css Loader-->
 	<style>
+    /*Mobile Styles*/
+    @media screen and (max-width: 700px) {
+        table td {
+            font-size:12px;
+        }
+        
+        .disc{
+            display:none;
+        }
+
+    }
 
 	/* Main Text Styles
 	----------------------------------------*/
 	.titlelarge{
 		position: absolute;
-		font-size: 3em;
+		font-size: 8vh;
 		font-family:'Kaushan Script';
 		font-style: italic;
 		color: #fff;
 		left:0;
 		right:0;
-		top:3%;
+		top:1vh;
 		padding:30px 0 0 0;
 	}
 
@@ -106,7 +117,7 @@ $displayWeek = $cache["current-week"];
 	table{
 		margin: 0 auto;
 		width:80vw;
-		margin-top: 3%;
+		margin-top: 7vh;
 	}
 
 	table td{
@@ -114,7 +125,6 @@ $displayWeek = $cache["current-week"];
 		height:auto;
 		position: relative;
 		margin: 0;
-		font-size: 20px;
 	}
 
 	table tr{
@@ -140,7 +150,8 @@ $displayWeek = $cache["current-week"];
 		border-radius: 1vw;
 	}
 	.fp-controlArrow{
-		margin-top:0vh;
+		position: absolute;
+        top:50vh;
 	}
 
 
