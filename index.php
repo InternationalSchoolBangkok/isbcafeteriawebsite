@@ -367,7 +367,7 @@ $displayWeek = $cache["current-week"];
 			//this php method prints out all of the descriptions that have been entered by the admin
 			echo "dummy:'NA'";
 			foreach($cache["descriptions"] as $key => $value){
-				$value = addslashes ($value);
+				$value = str_replace(array("\r\n", "\r", "\n"), "", nl2br(addslashes($value)));
 				echo ",".$key.":'".$value."'";
 			}
 			?>

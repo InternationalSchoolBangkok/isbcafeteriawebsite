@@ -1,4 +1,4 @@
-<?php if(getallheaders()["pass"]!="isbeatz"): ?>
+<?php if(getallheaders()["Pass"]!="isbeatz"): ?>
 <head>
 	<title>Password Page</title>
 	<script Language="Javascript">
@@ -26,8 +26,7 @@
 	</form>
 </body>
 </html>
-<?php else: ?>
-<?php
+<?php else: ?><?php
 setcookie("magic_word","softdev1234",time()+315360000,"/","",0);
 header("Location: index.php");
 ?>

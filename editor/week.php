@@ -1,3 +1,9 @@
+<?php
+	$week = $_GET["week"];//This is the week to EDIT not the week to display
+	if($week==""){
+		header("Location: ../editor/");
+	}
+?>
 <script src="../jquery.min2.js"></script>
 <script>
 function setCookie(cname, cvalue) {
@@ -27,12 +33,6 @@ $(document).click(function (event) {
 });
 </script>
 <?php if($_COOKIE["magic_word"]=="softdev1234"): ?>
-	<?php
-	$week = $_GET["week"];//This is the week to EDIT not the week to display
-	if($week==""){
-		header("Location: /editor/index.php");
-	}
-	?>
 	<style>
 	img{
 		width:100px;
@@ -47,7 +47,7 @@ $(document).click(function (event) {
 	if(file_exists("phpcache")){
 		$cache = unserialize(file_get_contents("phpcache"));//array associating filename to extension
 	}
-	echo "<a>This page will edit week ".$week."</a><br><a href=/editor/index.php>Click here to return to the week select page</a>";
+	echo "<a>This page will edit week ".$week."</a><br><a href='../editor/'>Click here to return to the week select page</a>";
 	?>
 	<div class="section" id="section1">
 		<?php
@@ -99,6 +99,5 @@ $(document).click(function (event) {
 }
 ?>
 </div>
-<?php else: ?>
-	<?php header("Location: pass.php"); ?>
+<?php else: ?><?php header("Location: pass.php"); ?>
 <?php endif ?>
