@@ -278,7 +278,7 @@ $displayWeek = $cache["current-week"];
 			anchors: ['firstPage', 'secondPage', '3rdPage'],
 			sectionsColor: ['#4A6FB1', '#939FAA', 'red'],
 			scrollingSpeed: 400,
-			autoScrolling:true,
+			autoScrolling:false,
 			scrollBar: true,
 			scrollOverflow: true
 		});
