@@ -36,6 +36,22 @@ $displayWeek = $cache["current-week"];
         }
 
     }
+    @media screen and (max-height: 600px) {
+        table{
+            padding-top: 10vh;
+        }
+        table td img{
+            width:10px;
+        }
+        body{
+            min-height:170vh;
+        }
+    }
+    @media screen and (max-height: 400px) {
+        body{
+            min-height:270vh;
+        }
+    }
 
 	/* Main Text Styles
 	----------------------------------------*/
@@ -59,8 +75,8 @@ $displayWeek = $cache["current-week"];
 	body{
 		font-family: helvetica;
 		color: #333;
-		height:120%;
 		width:100vw;
+        height:120vh;
 		position: relative;
 		-webkit-text-size-adjust: auto;
 	}
