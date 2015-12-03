@@ -75,7 +75,7 @@ if($uploadOk != 0){
 		setTimeout(goBack,5000);
 	}
 	function goBack(){
-		document.location = "/editor/index.php";
+		document.location = "index.php";
 	}
 	</script>
 </head>

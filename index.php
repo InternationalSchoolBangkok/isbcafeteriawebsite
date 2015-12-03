@@ -17,6 +17,7 @@ $displayWeek = $cache["current-week"];
 
 <head>
 	<title>Cafeteria</title>
+	<link rel="icon" type="image/x-icon" href="resources/icons/favicon.ico">
 	<!--Load Css files-->
 	<link rel="stylesheet" type="text/css" href="jquery.fullPage.css" />
 	<link rel="stylesheet" type="text/css" href="style.css" />
@@ -247,7 +248,7 @@ $displayWeek = $cache["current-week"];
 
 	#close {
 		position:absolute;
-		background:url("/resources/icons/close.png") 0 0 no-repeat;
+		background:url("resources/icons/close.png") 0 0 no-repeat;
 		width:24px;
 		height:27px;
 		display:block;
@@ -277,7 +278,7 @@ $displayWeek = $cache["current-week"];
 			anchors: ['firstPage', 'secondPage', '3rdPage'],
 			sectionsColor: ['#4A6FB1', '#939FAA', 'red'],
 			scrollingSpeed: 400,
-			autoScrolling:false,
+			autoScrolling:true,
 			scrollBar: true,
 			scrollOverflow: true
 		});
@@ -378,7 +379,7 @@ $displayWeek = $cache["current-week"];
 			description = "";
 		}
 		var content = "<img class='modal-img' src='"+img+"'/><br><br>"+description;
-		if(img.indexOf("/editor/images/blank.png") == -1||description!=""){
+		if(img.indexOf("editor/images/blank.png") == -1||description!=""){
 			modal.open({content: content});
 		}
 		event.preventDefault();
@@ -395,8 +396,7 @@ $displayWeek = $cache["current-week"];
 <body>
 	<div class='menuclicky'>Menu
 	</div>
-	<div class="disc">Disclaimer: menu subject to change without prior notice depending on availability<br>
-	Notice: All allergy information for dishes is available at food booths</div>
+	<div class="disc">Note: Menu names and allergy information can be found by clicking on the pictures</div>
 
 	<div class='menubar'>
 		<ul>
