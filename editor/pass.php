@@ -25,7 +25,6 @@
 		<input type="submit" value="Submit">
 	</form>
 </body>
-</html>
 <?php else: ?><?php
 setcookie("magic_word","softdev1234",time()+315360000,"/","",0);
 header("Location: index.php");
