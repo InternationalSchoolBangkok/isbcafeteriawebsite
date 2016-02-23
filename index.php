@@ -433,11 +433,11 @@ $displayWeek = $cache["current-week"];
 	<div class='menubar'>
 		<ul>
 			<li><a class='button-close'>Close</a></li>
-			<li><a href='#slide1'>Monday</a></li>
-			<li><a href='#slide2'>Tuesday</a></li>
-			<li><a href='#slide3'>Wednesday</a></li>
-			<li><a href='#slide4'>Thursday</a></li>
-			<li><a href='#slide5'>Friday</a></li>
+			<li><a href='#firstPage/slide1'>Monday</a></li>
+			<li><a href='#firstPage/slide2'>Tuesday</a></li>
+			<li><a href='#firstPage/slide3'>Wednesday</a></li>
+			<li><a href='#firstPage/slide4'>Thursday</a></li>
+			<li><a href='#firstPage/slide5'>Friday</a></li>
 
 			<li><a href='editor/'>Upload</a></li>
 		</ul>
