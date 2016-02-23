@@ -23,6 +23,7 @@ $displayWeek = $cache["current-week"];
 	<link rel="stylesheet" type="text/css" href="style.css" />
 	<link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
 	<script src="jquery.min2.js"></script>
+    <script src="index.js"></script>
 	<!--Temp Css Loader-->
 	<style>
     /*Mobile Styles*/
@@ -79,6 +80,7 @@ $displayWeek = $cache["current-week"];
         height:120vh;
 		position: relative;
 		-webkit-text-size-adjust: auto;
+        font-size:2vh;
 	}
 
 	/* Section Styling
@@ -145,6 +147,7 @@ $displayWeek = $cache["current-week"];
 
 	table tr{
 		text-align: center;
+        font-size: 3vh;
 	}
 
 	table tr:first-child td{
@@ -252,20 +255,20 @@ $displayWeek = $cache["current-week"];
 	}
 
 	#modal {
-		position:fixed;
+		position:absolute;
 		/*background:url(tint20.png) 0 0 repeat;*/
 		background:rgba(0,0,0,0.2);
 		border-radius:14px;
 		padding:8px;
 		z-index: 101;
 		max-width: 50vw;
-		margin-top: -10vh;
+		top:10vh;
 	}
 
 	#content {
 		border-radius:8px;
 		background:#fff;
-		padding:20px;
+		padding:1vw;
 	}
 
 
@@ -324,7 +327,9 @@ $displayWeek = $cache["current-week"];
 		method.center = function () {
 			var top, left;
 
+/*
 			top = Math.max($(window).height() - $modal.outerHeight(), 0) / 2;
+*/
 			left = Math.max($(window).width() - $modal.outerWidth(), 0) / 2;
 
 			$modal.css({
